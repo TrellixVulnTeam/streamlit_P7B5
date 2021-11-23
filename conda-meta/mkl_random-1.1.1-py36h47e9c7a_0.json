@@ -1,0 +1,210 @@
+{
+  "build": "py36h47e9c7a_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "mkl >=2020.1,<2021.0a0",
+    "numpy >=1.14,<2.0a0",
+    "python >=3.6,<3.7.0a0",
+    "vc >=14.1,<15.0a0",
+    "vs2015_runtime >=14.16.27012,<15.0a0",
+    "blas * mkl"
+  ],
+  "extracted_package_dir": "C:\\Users\\RICHARD\\.conda\\pkgs\\mkl_random-1.1.1-py36h47e9c7a_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/mkl_random-1.1.1.dist-info/INSTALLER",
+    "Lib/site-packages/mkl_random-1.1.1.dist-info/LICENSE.txt",
+    "Lib/site-packages/mkl_random-1.1.1.dist-info/METADATA",
+    "Lib/site-packages/mkl_random-1.1.1.dist-info/RECORD",
+    "Lib/site-packages/mkl_random-1.1.1.dist-info/WHEEL",
+    "Lib/site-packages/mkl_random-1.1.1.dist-info/top_level.txt",
+    "Lib/site-packages/mkl_random/__init__.py",
+    "Lib/site-packages/mkl_random/__pycache__/__init__.cpython-36.pyc",
+    "Lib/site-packages/mkl_random/__pycache__/_version.cpython-36.pyc",
+    "Lib/site-packages/mkl_random/__pycache__/setup.cpython-36.pyc",
+    "Lib/site-packages/mkl_random/_version.py",
+    "Lib/site-packages/mkl_random/mkl_distributions.h",
+    "Lib/site-packages/mkl_random/mklrand.cp36-win_amd64.pyd",
+    "Lib/site-packages/mkl_random/randomkit.h",
+    "Lib/site-packages/mkl_random/setup.py",
+    "Lib/site-packages/mkl_random/tests/__init__.py",
+    "Lib/site-packages/mkl_random/tests/__pycache__/__init__.cpython-36.pyc",
+    "Lib/site-packages/mkl_random/tests/__pycache__/test_random.cpython-36.pyc",
+    "Lib/site-packages/mkl_random/tests/__pycache__/test_regression.cpython-36.pyc",
+    "Lib/site-packages/mkl_random/tests/test_random.py",
+    "Lib/site-packages/mkl_random/tests/test_regression.py"
+  ],
+  "fn": "mkl_random-1.1.1-py36h47e9c7a_0.conda",
+  "legacy_bz2_md5": "1c240d356f368bd955a48b33914af1d4",
+  "legacy_bz2_size": 278766,
+  "license": "BSD 3-Clause",
+  "link": {
+    "source": "C:\\Users\\RICHARD\\.conda\\pkgs\\mkl_random-1.1.1-py36h47e9c7a_0",
+    "type": 1
+  },
+  "md5": "db2f65669c4ac72c0a3ca7ddc410f9a2",
+  "name": "mkl_random",
+  "package_tarball_full_path": "C:\\Users\\RICHARD\\.conda\\pkgs\\mkl_random-1.1.1-py36h47e9c7a_0.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/mkl_random-1.1.1.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "sha256_in_prefix": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+        "size_in_bytes": 4
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random-1.1.1.dist-info/LICENSE.txt",
+        "path_type": "hardlink",
+        "sha256": "955777b8b56b2286fd9402d2b34c9b454d3f3c82efb2953f16551eceac200c17",
+        "sha256_in_prefix": "955777b8b56b2286fd9402d2b34c9b454d3f3c82efb2953f16551eceac200c17",
+        "size_in_bytes": 1505
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random-1.1.1.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "0df04c40b43963249e3383533685d79467d1dc00e9544c3b2a2b35693ae5bea0",
+        "sha256_in_prefix": "0df04c40b43963249e3383533685d79467d1dc00e9544c3b2a2b35693ae5bea0",
+        "size_in_bytes": 419
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random-1.1.1.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "814e0a4d8f6a5af399efc088c1e2d3cae443d847d86da6ad4adef06961b12436",
+        "sha256_in_prefix": "814e0a4d8f6a5af399efc088c1e2d3cae443d847d86da6ad4adef06961b12436",
+        "size_in_bytes": 1595
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random-1.1.1.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "329edc352264c0e71c0596b112dc98865cded475d108b2d7ded22554b4e2c761",
+        "sha256_in_prefix": "329edc352264c0e71c0596b112dc98865cded475d108b2d7ded22554b4e2c761",
+        "size_in_bytes": 106
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random-1.1.1.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "4942b845967daa874f95c251a995ba8dead6079bf876c2010d6c34fae2792aff",
+        "sha256_in_prefix": "4942b845967daa874f95c251a995ba8dead6079bf876c2010d6c34fae2792aff",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "392c02968670908e9e994830e424faccab4cadef05cb949c5cc09093e39fbfb9",
+        "sha256_in_prefix": "392c02968670908e9e994830e424faccab4cadef05cb949c5cc09093e39fbfb9",
+        "size_in_bytes": 1999
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/__pycache__/__init__.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "f818b97d2504d74b3c7f1daece4b9e3921de53c880dbd92233f5f3fdef64a758",
+        "sha256_in_prefix": "f818b97d2504d74b3c7f1daece4b9e3921de53c880dbd92233f5f3fdef64a758",
+        "size_in_bytes": 520
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/__pycache__/_version.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "9c3f43c023e49fb49099e85bb353ab1a72aed3641d87c30ca6484bcfc5c1d589",
+        "sha256_in_prefix": "9c3f43c023e49fb49099e85bb353ab1a72aed3641d87c30ca6484bcfc5c1d589",
+        "size_in_bytes": 144
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/__pycache__/setup.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "a4b73dd2f855ba28e46848f87be3a13f0e7aa0745b474480c8cd7f288fc80d5d",
+        "sha256_in_prefix": "a4b73dd2f855ba28e46848f87be3a13f0e7aa0745b474480c8cd7f288fc80d5d",
+        "size_in_bytes": 2517
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/_version.py",
+        "path_type": "hardlink",
+        "sha256": "82f55f75c09b9622deeb8ddb4721de70eacfe24fa027faf60cf58f609f4f3d83",
+        "sha256_in_prefix": "82f55f75c09b9622deeb8ddb4721de70eacfe24fa027faf60cf58f609f4f3d83",
+        "size_in_bytes": 23
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/mkl_distributions.h",
+        "path_type": "hardlink",
+        "sha256": "34ec1ba73db7a6c68379d9798c12ac1eb1f582ea875bdcc821d74c44e9ef68d5",
+        "sha256_in_prefix": "34ec1ba73db7a6c68379d9798c12ac1eb1f582ea875bdcc821d74c44e9ef68d5",
+        "size_in_bytes": 7973
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/mklrand.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "e8ca69e869c81c06550faebec6e2d6296a13f4a3ee43646eaae11720986a8ee8",
+        "sha256_in_prefix": "e8ca69e869c81c06550faebec6e2d6296a13f4a3ee43646eaae11720986a8ee8",
+        "size_in_bytes": 768000
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/randomkit.h",
+        "path_type": "hardlink",
+        "sha256": "69177e03882c5e10af7dedfec05bf99344cdf3f8a8f43e5b3d4738c20be9163f",
+        "sha256_in_prefix": "69177e03882c5e10af7dedfec05bf99344cdf3f8a8f43e5b3d4738c20be9163f",
+        "size_in_bytes": 4694
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/setup.py",
+        "path_type": "hardlink",
+        "sha256": "3dde0b28830d0e786db0fe660d6ed6163284e87d129eea51677202b9317f1a5c",
+        "sha256_in_prefix": "3dde0b28830d0e786db0fe660d6ed6163284e87d129eea51677202b9317f1a5c",
+        "size_in_bytes": 4488
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/tests/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "af2829ce5e2e655e1bdf3308d0d6536521831edd79606a9ef09aa4fad03bbcb2",
+        "sha256_in_prefix": "af2829ce5e2e655e1bdf3308d0d6536521831edd79606a9ef09aa4fad03bbcb2",
+        "size_in_bytes": 1572
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/tests/__pycache__/__init__.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "2205a214ee65e981f08aaa19e4f419079ead83978e3184b01e62d767615c775c",
+        "sha256_in_prefix": "2205a214ee65e981f08aaa19e4f419079ead83978e3184b01e62d767615c775c",
+        "size_in_bytes": 129
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/tests/__pycache__/test_random.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "1e2c30b7d2432b455e1d497043ca09fb9b2e8310119a7252441808620758ccc9",
+        "sha256_in_prefix": "1e2c30b7d2432b455e1d497043ca09fb9b2e8310119a7252441808620758ccc9",
+        "size_in_bytes": 38314
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/tests/__pycache__/test_regression.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "2368ec03dd3903c5aa79199f51cbdb692e5a28085dc866da988539659e3b8fe9",
+        "sha256_in_prefix": "2368ec03dd3903c5aa79199f51cbdb692e5a28085dc866da988539659e3b8fe9",
+        "size_in_bytes": 5187
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/tests/test_random.py",
+        "path_type": "hardlink",
+        "sha256": "1863ea4def95c3533bd3ef9f002bf99e3f8ac2110fa67456499af0157fcaad09",
+        "sha256_in_prefix": "1863ea4def95c3533bd3ef9f002bf99e3f8ac2110fa67456499af0157fcaad09",
+        "size_in_bytes": 42122
+      },
+      {
+        "_path": "Lib/site-packages/mkl_random/tests/test_regression.py",
+        "path_type": "hardlink",
+        "sha256": "aa13a7861f2591a6c373ac0f55433a82c82ee091e2db141894845d98ccbe73b6",
+        "sha256_in_prefix": "aa13a7861f2591a6c373ac0f55433a82c82ee091e2db141894845d98ccbe73b6",
+        "size_in_bytes": 6705
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2d66b54301459f05d2b88e668851382db579682ac630a2975c38dd44c7e74365",
+  "size": 240189,
+  "subdir": "win-64",
+  "timestamp": 1590531669079,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/mkl_random-1.1.1-py36h47e9c7a_0.conda",
+  "version": "1.1.1"
+}

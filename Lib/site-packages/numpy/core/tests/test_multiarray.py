@@ -818,37 +818,6 @@ class TestCreation:
 
         assert_raises(ValueError, np.array, x())
 
-    @pytest.mark.parametrize("error", [RecursionError, MemoryError])
-    @pytest.mark.parametrize("attribute",
-        ["__array_interface__", "__array__", "__array_struct__"])
-    def test_bad_array_like_attributes(self, attribute, error):
-        # Check that errors during attribute retrieval are raised unless
-        # they are Attribute errors.
-
-        class BadInterface:
-           def __getattr__(self, attr):
-               if attr == attribute:
-                   raise error
-               super().__getattr__(attr)
-
-        with pytest.raises(error):
-            np.array(BadInterface())
-
-    @pytest.mark.parametrize("error", [RecursionError, MemoryError])
-    def test_bad_array_like_bad_length(self, error):
-        # RecursionError and MemoryError are considered "critical" in
-        # sequences. We could expand this more generally though. (NumPy 1.20)
-        class BadSequence:
-            def __len__(self):
-                raise error
-            def __getitem__(self):
-                # must have getitem to be a Sequence
-                return 1
-
-        with pytest.raises(error):
-            np.array(BadSequence())
-
-
     def test_from_string(self):
         types = np.typecodes['AllInteger'] + np.typecodes['Float']
         nstr = ['123', '123']
@@ -5016,17 +4985,6 @@ class TestIO:
             s = f.read()
         assert_equal(s, '1.51,2.00,3.51,4.00')
 
-    def test_tofile_cleanup(self):
-        x = np.zeros((10), dtype=object)
-        with open(self.filename, 'wb') as f:
-            assert_raises(IOError, lambda: x.tofile(f, sep=''))
-        # Dup-ed file handle should be closed or remove will fail on Windows OS
-        os.remove(self.filename)
-
-        # Also make sure that we close the Python handle
-        assert_raises(IOError, lambda: x.tofile(self.filename))
-        os.remove(self.filename)
-
     def test_locale(self):
         with CommaDecimalPointLocale():
             self.test_numbers()
@@ -5050,33 +5008,6 @@ class TestIO:
             # binary fromstring is deprecated
             res = np.fromstring(x_str, dtype="(3,4)i4")
             assert_array_equal(x, res)
-
-    def test_parsing_subarray_unsupported(self):
-        # We currently do not support parsing subarray dtypes
-        data = "12,42,13," * 50
-        with pytest.raises(ValueError):
-            expected = np.fromstring(data, dtype="(3,)i", sep=",")
-
-        with open(self.filename, "w") as f:
-            f.write(data)
-
-        with pytest.raises(ValueError):
-            np.fromfile(self.filename, dtype="(3,)i", sep=",")
-
-    def test_read_shorter_than_count_subarray(self):
-        # Test that requesting more values does not cause any problems
-        # in conjuction with subarray dimensions being absored into the
-        # array dimension.
-        expected = np.arange(511 * 10, dtype="i").reshape(-1, 10)
-
-        binary = expected.tobytes()
-        with pytest.raises(ValueError):
-            with pytest.warns(DeprecationWarning):
-                np.fromstring(binary, dtype="(10,)i", count=10000)
-
-        expected.tofile(self.filename)
-        res = np.fromfile(self.filename, dtype="(10,)i", count=10000)
-        assert_array_equal(res, expected)
 
 
 class TestFromBuffer:
@@ -7248,10 +7179,9 @@ class TestNewBufferProtocol:
         x3 = np.arange(dt3.itemsize, dtype=np.int8).view(dt3)
         self._check_roundtrip(x3)
 
-    @pytest.mark.valgrind_error(reason="leaks buffer info cache temporarily.")
-    def test_relaxed_strides(self, c=np.ones((1, 10, 10), dtype='i8')):
-        # Note: c defined as parameter so that it is persistent and leak
-        # checks will notice gh-16934 (buffer info cache leak).
+    def test_relaxed_strides(self):
+        # Test that relaxed strides are converted to non-relaxed
+        c = np.ones((1, 10, 10), dtype='i8')
 
         # Check for NPY_RELAXED_STRIDES_CHECKING:
         if np.ones((10, 1), order="C").flags.f_contiguous:
@@ -7275,23 +7205,6 @@ class TestNewBufferProtocol:
             shape, strides = _multiarray_tests.get_buffer_info(
                     arr, ['C_CONTIGUOUS'])
             assert_(strides[-1] == 8)
-
-    @pytest.mark.valgrind_error(reason="leaks buffer info cache temporarily.")
-    @pytest.mark.skipif(not np.ones((10, 1), order="C").flags.f_contiguous,
-            reason="Test is unnecessary (but fails) without relaxed strides.")
-    def test_relaxed_strides_buffer_info_leak(self, arr=np.ones((1, 10))):
-        """Test that alternating export of C- and F-order buffers from
-        an array which is both C- and F-order when relaxed strides is
-        active works.
-        This test defines array in the signature to ensure leaking more
-        references every time the test is run (catching the leak with
-        pytest-leaks).
-        """
-        for i in range(10):
-            _, s = _multiarray_tests.get_buffer_info(arr, ['F_CONTIGUOUS'])
-            assert s == (8, 8)
-            _, s = _multiarray_tests.get_buffer_info(arr, ['C_CONTIGUOUS'])
-            assert s == (80, 8)
 
     def test_out_of_order_fields(self):
         dt = np.dtype(dict(
