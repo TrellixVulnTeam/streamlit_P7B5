@@ -1,13 +1,12 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-from PIL import Image
 ecom_data = pd.read_csv('data.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
 st.set_page_config(page_title='mondelez',layout='wide')
 st.header('Mondelez Noviembre 2021')
-# st.dataframe(ecom_data)
+
 proveedores=ecom_data['NOM_PRO'].unique().tolist()
 mes=ecom_data['MES_DOC'].unique().tolist()
 
@@ -48,13 +47,7 @@ fig_coverage_sup=px.bar(
     #template="plotly_whhite",
 )
 st.plotly_chart(fig_coverage_sup)
-# bar_chart=px.bar(df_grouped,
-#                x='supervisor',
-#                Y='promedio',
-#                text='promedio',
-#                color_discrete_sequence=['#F63366']*len(df_grouped),
-#                template='plotly_white')
-# st.bar_chart
+
 
 pie_chart=px.pie(ecom_data,
                 title='proveedores',
