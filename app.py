@@ -1,29 +1,28 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-ecom_data = pd.read_csv('data.csv',sep=';')
+ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
 st.set_page_config(page_title='mondelez',layout='wide')
-st.header('Mondelez Noviembre 2021')
+st.header('Mondelez Diciembre 2021')
 
-proveedores=ecom_data['NOM_PRO'].unique().tolist()
-mes=ecom_data['MES_DOC'].unique().tolist()
-
-st.sidebar.header("filtrar aqui")
+proveedores=ecom_data['COD_MES'].unique().tolist()
+mes=ecom_data[' MES '].unique().tolist()
 mes_selection=st.sidebar.slider('Mes:',
                         min_value=min(mes),
                         max_value=max(mes),
-                        value=(min(mes),max(mes)))
+                        value=(min(mes),max(mes))
+                        )
 
-proveedor_selection=st.sidebar.multiselect('proveedor:',
+proveedor_selection=st.sidebar.multiselect('Proveedor:',
                         proveedores,
                         default=proveedores)  
 
-mask=(ecom_data['NOM_PRO'].isin(proveedor_selection)) & (ecom_data['MES_DOC'].between(*mes_selection))
+mask=(ecom_data['COD_MES'].isin(proveedor_selection)) & (ecom_data[' MES '].between(*mes_selection))
 num_resul=ecom_data[mask].shape[0]  
 df_selection= ecom_data[mask]
-st.dataframe(df_selection)  
+# st.dataframe(df_selection)  
 st.markdown(f'*resultado disponibles: {num_resul}*') 
                                        
 
@@ -35,23 +34,30 @@ st.markdown(f'*resultado disponibles: {num_resul}*')
 
 # ----plotear bar chart
 coverage_by_supervisor=(
-    df_selection.groupby(by=['COD_MES']).sum()[['COB']].sort_values(by='COB')
+    df_selection.groupby(by=[' MES ']).sum()[[' COB ']].sort_values(by=' COB ')
 )
 fig_coverage_sup=px.bar(
     coverage_by_supervisor,
-    x="COB",
+    x=" COB ",
     y=coverage_by_supervisor.index,
     orientation="h",
-    title="<b>Cobertura por supervisor</b>",
+    title="<b>Coberturas en el mes</b>",
     # color_descrete_sequence=["#008388"] * len(coverage_by_supervisor),
     #template="plotly_whhite",
 )
 st.plotly_chart(fig_coverage_sup)
 
 
-pie_chart=px.pie(ecom_data,
-                title='proveedores',
-                values='VTA',
-                names='COD_PLA')
+pie_chart=px.pie(df_selection,
+                title='Frecuencia de compras',
+                values=' COB ',
+                names='EFE_MON')
 
-st.plotly_chart(pie_chart)                
+st.plotly_chart(pie_chart) 
+
+pie_chart1=px.pie(df_selection,
+                title='Compras Mensual',
+                values=' DROP_MON ',
+                names='EFE_MON')
+
+st.plotly_chart(pie_chart1) 
