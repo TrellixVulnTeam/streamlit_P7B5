@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+import sys
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
@@ -25,15 +26,23 @@ if nav == "Cobertura":
                         max_value=max(mes),
                         value=(min(mes),max(mes))
                         )
-
      proveedor_selection=st.sidebar.multiselect('Supervisor:',
                         proveedores,
                         default=proveedores)  
-
+     
      mask=(ecom_data['COD_MES'].isin(proveedor_selection)) & (ecom_data['MES'].between(*mes_selection))
      num_resul=ecom_data[mask].shape[0]  
      num_resul=ecom_data[mask].shape[0] 
      df_selection= ecom_data[mask]
+     bins=[0, 25, 50 , 100, sys.maxsize]
+     labels=[' <25','25-50','50-100','>100']
+     ticket_group=pd.cut(df_selection['DROP_MON'],bins=bins,labels=labels)
+     df_selection['CATEGORIA']=ticket_group
+     figheatmap=px.density_heatmap(df_selection,x='COD_MES',y='CATEGORIA',
+                                   z='COB',
+                                   color_continuous_scale="Viridis",
+                                   title="Analisis por rango de compras",)
+                                  
      # st.dataframe(df_selection) 
      # st.title("Coverage Dashboard") 
      st.markdown("## Coverage Dashboard")
@@ -71,10 +80,13 @@ if nav == "Cobertura":
           y=coverage_by_supervisor.index,
           orientation="h",
           title="Clientes con registro de compras",
-    # color_descrete_sequence=["#008388"] * len(coverage_by_supervisor),
-    #template="plotly_whhite",
           )
-     st.plotly_chart(fig_coverage_sup)
+     colchart1, colchart2=st.columns(2)  
+     with colchart1:
+               colchart1.plotly_chart(fig_coverage_sup,use_container_width = True)
+     with colchart2:
+               colchart2.plotly_chart(figheatmap,use_container_width = True)
+
      pie_chart=px.pie(df_selection,
                 title='Frecuencia de compras',
                 values='COB',
