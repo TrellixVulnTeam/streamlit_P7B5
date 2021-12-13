@@ -38,10 +38,11 @@ if nav == "Cobertura":
      labels=[' <25','25-50','50-100','>100']
      ticket_group=pd.cut(df_selection['DROP_MON'],bins=bins,labels=labels)
      df_selection['CATEGORIA']=ticket_group
-     figheatmap=px.density_heatmap(df_selection,x='COD_MES',y='CATEGORIA',
+     figheatmap=px.density_heatmap(df_selection,x='EFE_MON',y='CATEGORIA',
                                    z='COB',
                                    color_continuous_scale="Viridis",
-                                   title="Analisis por rango de compras",)
+                                   labels={'CATEGORIA':'Categoría','EFE_MON':'Frecuencia de compra'},
+                                   title="Analisis por rango de compras")
                                   
      # st.dataframe(df_selection) 
      # st.title("Coverage Dashboard") 
@@ -78,9 +79,18 @@ if nav == "Cobertura":
           coverage_by_supervisor,
           x="COB",
           y=coverage_by_supervisor.index,
+          labels={'COB':'registro de última compra'},
           orientation="h",
           title="Clientes con registro de compras",
           )
+     #fig_coverage_sup=px.bar(
+     #     df_selection,
+     #     x="COD_MES",
+     #     y="COB",
+     #     text='COB',
+     #     color='COD_MES',
+     #     title="Clientes con registro de compras",
+     #     )     
      colchart1, colchart2=st.columns(2)  
      with colchart1:
                colchart1.plotly_chart(fig_coverage_sup,use_container_width = True)
