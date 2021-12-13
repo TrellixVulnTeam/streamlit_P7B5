@@ -40,7 +40,9 @@ if nav == "Cobertura":
      df_selection['CATEGORIA']=ticket_group
      figheatmap=px.density_heatmap(df_selection,x='EFE_MON',y='CATEGORIA',
                                    z='COB',
-                                   color_continuous_scale="Viridis",
+                                   #color_continuous_scale="Viridis",
+                                   marginal_x='histogram',
+                                   marginal_y='histogram',
                                    labels={'CATEGORIA':'Categoría','EFE_MON':'Frecuencia de compra'},
                                    title="Analisis por rango de compras")
                                   
