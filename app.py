@@ -49,7 +49,7 @@ if nav == "Cobertura":
      # st.dataframe(df_selection) 
      # st.title("Coverage Dashboard") 
      st.markdown("## Coverage Dashboard")
-     df_col=pd.to_numeric(df_selection["DROP_MON"])
+     df_col=df_selection["DROP_MON"]
      compra_min=df_col.min(skipna=True)
      compra_max=int(df_col.max(skipna=True))
      compra_pro=int(df_col.mean(skipna=True)) 
