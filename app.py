@@ -10,13 +10,12 @@ st.set_page_config(page_title='mondelez',layout='wide')
 st.markdown("""
 <style>
 .big-font {
-    font-size:50px !important;
+    font-size:40px !important;
 }
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">Mondelez Diciembre 2021</p>', unsafe_allow_html=True)
-#st.header('Mondelez Diciembre 2021')
 nav=st.sidebar.radio("Menu",["KPI's","Cobertura","Volumen","Vendedor"],index=0)
 if nav == "Cobertura":
      proveedores=ecom_data['COD_MES'].unique().tolist()
@@ -31,7 +30,6 @@ if nav == "Cobertura":
                         default=proveedores)  
      
      mask=(ecom_data['COD_MES'].isin(proveedor_selection)) & (ecom_data['MES'].between(*mes_selection))
-     num_resul=ecom_data[mask].shape[0]  
      num_resul=ecom_data[mask].shape[0] 
      df_selection= ecom_data[mask]
      bins=[0, 25, 50 , 100, sys.maxsize]
