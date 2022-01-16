@@ -189,7 +189,7 @@ if nav == "Ubicacion":
                Map=geemap.Map()
                #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
                # Add a basemap
-               Map.add_basemap("TERRAIN")
+               #Map.add_basemap("TERRAIN")
                fc = geemap.pandas_to_ee(df_sel, latitude="LATITUD", longitude="LONGITUD")
                Map.addLayer(fc, {'color':'red'}, "CLIENTES")
                Map.centerObject(fc,zoom=35)
