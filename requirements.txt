@@ -6,3 +6,4 @@ requests==2.26.0
 plotly_express==0.4.1
 folium
 geemap
+streamlit_folium
