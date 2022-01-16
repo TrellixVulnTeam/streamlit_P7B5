@@ -6,6 +6,7 @@ import geemap.foliumap as geemap
 import sys
 import ee
 import geemap
+import folium
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
@@ -174,28 +175,55 @@ if nav == "Ubicacion":
                mask=(ecom_data['COD_VEN']==vendedor_selection) & (ecom_data['DIA_VIS']==dia_selection)
                num_resul=ecom_data[mask]  
                resul=ecom_data[mask].shape[0] 
+               df_cob=num_resul.loc[num_resul['MES']<12]
+               resul_cob=df_cob.shape[0]
                st.markdown(resul)
-               df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
-               #st.table(df_sel) 
-               # Import libraries
+               st.markdown(resul_cob)
+               df_sel=df_cob.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
                import ee
                import geemap.foliumap as geemap
                from streamlit_folium import folium_static
+               from folium import plugins
+               from folium.plugins import HeatMap
                # Create an interactive map
-               #Map=geemap.Map(center=(-12.084388,-77.06675),zoom=20)
                Map=geemap.Map()
                #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
                # Add a basemap
                Map.add_basemap("TERRAIN")
                fc = geemap.pandas_to_ee(df_sel, latitude="LATITUD", longitude="LONGITUD")
-               singleBandVis = {
-                         'min': 0,
-                         'max': 3000,
-                         'palette': ['blue', 'yellow', 'green']}
                Map.addLayer(fc, {'color':'red'}, "CLIENTES")
-               Map.centerObject(fc,zoom=15)
+               Map.centerObject(fc,zoom=35)
+               import pandas as pd
+
+               d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
+               df=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI']] 
+               col_names=df.columns.values.tolist()
+               x="LONGITUD"
+               y="LATITUD"
+               marker_cluster = plugins.MarkerCluster(name="cluster").add_to(Map)
+
+               for row in d.itertuples():
+                    html = ""
+                    for p in col_names:
+                                html = (
+                                  html
+                                    + "<b>"
+                                    + p
+                                    + "</b>"
+                                    + ": "
+                                    + str(eval(str("row." + p)))
+                                    + "<br>"
+                                   )
+                    popup_html = folium.Popup(html, min_width=100, max_width=200)
+                    folium.Marker(
+                    location=[eval(f"row.{y}"), eval(f"row.{x}")], popup=popup_html
+                    ).add_to(marker_cluster)
+                    
                # Render the map using streamlit
+               Map.add_layer_control()
                folium_static(Map)
+               st.table(d)
+               st.download_button(label='Download CSV',data=d.to_csv(),mime='text/csv')
         
         
 
