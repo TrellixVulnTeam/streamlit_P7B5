@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 import pydeck as pdk
-import geemap.foliumap as geemap
+#import geemap.foliumap as geemap
 import sys
 import ee
 import geemap
