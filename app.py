@@ -1,7 +1,11 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+import pydeck as pdk
+import geemap.foliumap as geemap
 import sys
+import ee
+import geemap
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
@@ -16,7 +20,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown('<p class="big-font">Mondelez Diciembre 2021</p>', unsafe_allow_html=True)
-nav=st.sidebar.radio("Menu",["KPI's","Cobertura","Volumen","Vendedor"],index=0)
+nav=st.sidebar.radio("Menu",["KPI's","Cobertura","Volumen","Vendedor","Ubicacion"],index=0)
 if nav == "Cobertura":
      proveedores=ecom_data['COD_MES'].unique().tolist()
      mes=ecom_data['MES'].unique().tolist()
@@ -44,8 +48,6 @@ if nav == "Cobertura":
                                    labels={'CATEGORIA':'Categoría','EFE_MON':'Frecuencia de compra'},
                                    title="Analisis por rango de compras")
                                   
-     # st.dataframe(df_selection) 
-     # st.title("Coverage Dashboard") 
      st.markdown("## Coverage Dashboard")
      df_col=df_selection["DROP_MON"]
      compra_min=df_col.min(skipna=True)
@@ -83,14 +85,6 @@ if nav == "Cobertura":
           orientation="h",
           title="Clientes con registro de compras",
           )
-     #fig_coverage_sup=px.bar(
-     #     df_selection,
-     #     x="COD_MES",
-     #     y="COB",
-     #     text='COB',
-     #     color='COD_MES',
-     #     title="Clientes con registro de compras",
-     #     )     
      colchart1, colchart2=st.columns(2)  
      with colchart1:
                colchart1.plotly_chart(fig_coverage_sup,use_container_width = True)
@@ -124,6 +118,7 @@ if nav == "Vendedor":
                         vendedores,
                         index=0) 
           mask=(ecom_data['COD_VEN']==vendedor_selection) 
+          st.markdown(vendedor_selection)     
           num_resul=ecom_data[mask].shape[0]  
           num_resul=ecom_data[mask].shape[0] 
           df_selection= ecom_data[mask]          
@@ -159,3 +154,49 @@ if nav == "Vendedor":
           st.success(f'Clientes no coberturados {num_cob:,}')
           st.table(df_sel)
           st.download_button(label='Download CSV',data=df_sel.to_csv(),mime='text/csv')
+if nav == "Ubicacion":
+     dia=ecom_data['DIA_VIS'].unique().tolist()
+     dia_selection=st.sidebar.selectbox("Elije dia de visita",
+                        dia,
+                        index=0)  
+     supervisores=ecom_data['COD_MES'].unique().tolist()
+     proveedor_selection=st.sidebar.selectbox("Elije un Supervisor",
+                        supervisores,
+                        index=0)  
+     if proveedor_selection :
+          vend_list=ecom_data.loc[ecom_data['COD_MES']==proveedor_selection]
+          vendedores=vend_list['COD_VEN'].unique().tolist()
+          vendedor_selection=st.sidebar.selectbox("Elije un Vendedor",
+                        vendedores,
+                        index=0) 
+          
+          if st.checkbox("Mostrar Plano"):
+               mask=(ecom_data['COD_VEN']==vendedor_selection) & (ecom_data['DIA_VIS']==dia_selection)
+               num_resul=ecom_data[mask]  
+               resul=ecom_data[mask].shape[0] 
+               st.markdown(resul)
+               df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
+               #st.table(df_sel) 
+               # Import libraries
+               import ee
+               import geemap.foliumap as geemap
+               from streamlit_folium import folium_static
+               # Create an interactive map
+               #Map=geemap.Map(center=(-12.084388,-77.06675),zoom=20)
+               Map=geemap.Map()
+               #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
+               # Add a basemap
+               Map.add_basemap("TERRAIN")
+               fc = geemap.pandas_to_ee(df_sel, latitude="LATITUD", longitude="LONGITUD")
+               singleBandVis = {
+                         'min': 0,
+                         'max': 3000,
+                         'palette': ['blue', 'yellow', 'green']}
+               Map.addLayer(fc, {'color':'red'}, "CLIENTES")
+               Map.centerObject(fc,zoom=15)
+               # Render the map using streamlit
+               folium_static(Map)
+        
+        
+
+
