@@ -4,7 +4,7 @@ import plotly.express as px
 import pydeck as pdk
 #import geemap.foliumap as geemap
 import sys
-import ee
+# import ee
 import geemap
 import folium
 ecom_data = pd.read_csv('norte1.csv',sep=';')
