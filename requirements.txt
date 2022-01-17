@@ -7,3 +7,4 @@ plotly_express==0.4.1
 folium
 geemap
 streamlit-folium
+earthengine-api>=0.1.230
