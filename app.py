@@ -1,13 +1,12 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-import pydeck as pdk
 #import geemap.foliumap as geemap
 import sys
-# import ee
 import geemap
 import folium
 import ee
+ee.Initialize()
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
