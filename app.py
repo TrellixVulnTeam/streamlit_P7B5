@@ -7,6 +7,7 @@ import sys
 # import ee
 import geemap
 import folium
+import ee
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 
@@ -186,11 +187,7 @@ if nav == "Ubicacion":
                from folium import plugins
                from folium.plugins import HeatMap
                # Create an interactive map
-               try:
-                    ee.Initialize()
-               except Exception as e:
-                    ee.Authenticate()
-                    ee.Initialize()
+                  
                #ee.Initialize(token=4/1AX4XfWjoXNnVcZ_mtJq3M9DJ1VZr-FwV6a8W96-j3DfsHFH-uOQfoK0_ENo)
                Map=geemap.Map()
                #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
