@@ -9,9 +9,7 @@ import ee
 ee.Initialize()
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
-
 st.set_page_config(page_title='mondelez',layout='wide')
-
 st.markdown("""
 <style>
 .big-font {
