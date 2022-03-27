@@ -5,8 +5,9 @@ import plotly.express as px
 import sys
 import geemap
 import folium
-import ee
-ee.Initialize()
+#import ee
+#ee.Initialize()
+import os
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 # ecom_data.dropna(inplace=True)
 st.set_page_config(page_title='mondelez',layout='wide')
@@ -178,21 +179,33 @@ if nav == "Ubicacion":
                st.markdown(resul)
                st.markdown(resul_cob)
                df_sel=df_cob.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
-               import ee
+               #import ee
                import geemap.foliumap as geemap
                from streamlit_folium import folium_static
                from folium import plugins
                from folium.plugins import HeatMap
+               from folium.plugins import MarkerCluster
+               
                # Create an interactive map
                   
                #ee.Initialize(token=4/1AX4XfWjoXNnVcZ_mtJq3M9DJ1VZr-FwV6a8W96-j3DfsHFH-uOQfoK0_ENo)
-               Map=geemap.Map()
+               mapa=geemap.Map()
+               #mapa = folium.Map(location=[-11.9021, -77.0686], tiles="OpenStreetMap",max_zoom=25, zoom_start=20)
                #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
                # Add a basemap
                #Map.add_basemap("TERRAIN")
                fc = geemap.pandas_to_ee(df_sel, latitude="LATITUD", longitude="LONGITUD")
-               Map.addLayer(fc, {'color':'red'}, "CLIENTES")
-               Map.centerObject(fc,zoom=35)
+               mapa.addLayer(fc, {'color':'red'}, "CLIENTES")
+               mapa.centerObject(fc,zoom=15)
+               
+               #cartera=folium.FeatureGroup(name='clientes')
+               #for i in df_sel.itertuples():
+               #     folium.Marker(location=[i.LATITUD,i.LONGITUD],
+               #                    popup=i.NOM_CLI).add_to(cartera)
+               #     mapa.add_child(cartera)
+               #     latitud=i.LATITUD
+               #     longitud=i.LONGITUD
+                    
                import pandas as pd
 
                d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
@@ -200,7 +213,8 @@ if nav == "Ubicacion":
                col_names=df.columns.values.tolist()
                x="LONGITUD"
                y="LATITUD"
-               marker_cluster = plugins.MarkerCluster(name="cluster").add_to(Map)
+               marker_cluster = plugins.MarkerCluster(name="cluster").add_to(mapa)
+               mapa.add_child(marker_cluster)
 
                for row in d.itertuples():
                     html = ""
@@ -216,15 +230,15 @@ if nav == "Ubicacion":
                                    )
                     popup_html = folium.Popup(html, min_width=100, max_width=200)
                     folium.Marker(
-                    location=[eval(f"row.{y}"), eval(f"row.{x}")], popup=popup_html
+                                   location=[eval(f"row.{y}"), eval(f"row.{x}")],
+                                   popup=popup_html
                     ).add_to(marker_cluster)
                     
                # Render the map using streamlit
-               Map.add_layer_control()
-               folium_static(Map)
+               mapa.add_child(folium.map.LayerControl())
+               #mapa=folium.Map(location=[latitud,longitud],zoom_start=15)
+               #mapa.centerObject(marker_cluster,zoom=35)
+               folium_static(mapa)
+               #folium_static(mapa.add_child(folium.map.LayerControl())) 
                st.table(d)
                st.download_button(label='Download CSV',data=d.to_csv(),mime='text/csv')
-        
-        
-
-
