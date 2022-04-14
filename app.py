@@ -179,7 +179,7 @@ if nav == "Ubicacion":
                st.markdown(resul)
                st.markdown(resul_cob)
                df_sel=df_cob.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
-               #import ee
+               import ee
                import geemap.foliumap as geemap
                from streamlit_folium import folium_static
                from folium import plugins
