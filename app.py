@@ -188,7 +188,7 @@ if nav == "Ubicacion":
                
                # Create an interactive map
                   
-               #ee.Initialize(token=4/1AX4XfWjoXNnVcZ_mtJq3M9DJ1VZr-FwV6a8W96-j3DfsHFH-uOQfoK0_ENo)
+               ee.Initialize(None)
                mapa=geemap.Map()
                #mapa = folium.Map(location=[-11.9021, -77.0686], tiles="OpenStreetMap",max_zoom=25, zoom_start=20)
                #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
