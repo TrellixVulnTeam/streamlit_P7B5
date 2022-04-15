@@ -187,18 +187,27 @@ if nav == "Ubicacion":
                from folium.plugins import MarkerCluster
                
                # Create an interactive map
-               ee_token = os.environ["EARTHENGINE_TOKEN"]
-               credential = '{"refresh_token":"%s"}' % ee_token
-               credential_file_path = os.path.expanduser("~/.config/earthengine/")
-               os.makedirs(credential_file_path, exist_ok=True)
-               with open(credential_file_path + "credentials", "w") as file:
-                    file.write(credential)   
-               try:
-                    ee.Initialize()
-               except Exception as e:
-                    ee.Authenticate()
-                    ee.Initialize()
-
+               def ee_initialize(token_name="EARTHENGINE_TOKEN"):
+                    """Authenticates Earth Engine and initialize an Earth Engine session"""
+                    if ee.data._credentials is None:
+                         try:
+                              ee_token = os.environ.get(token_name)
+                              if ee_token is not None:
+                                   credential_file_path = os.path.expanduser("~/.config/earthengine/")
+                                   if not os.path.exists(credential_file_path):
+                                        credential = '{"refresh_token":"%s"}' % ee_token
+                                        os.makedirs(credential_file_path, exist_ok=True)
+                                        with open(credential_file_path + "credentials", "w") as file:
+                                             file.write(credential)
+                              ee.Initialize()
+                         except Exception:
+                              ee.Authenticate()
+                              ee.Initialize()
+               #ee_token = os.environ["EARTHENGINE_TOKEN"]
+               #credential = '{"refresh_token":"%s"}' % ee_token
+               #credential_file_path = os.path.expanduser("~/.config/earthengine/")
+               #os.makedirs(credential_file_path, exist_ok=True)
+               
                mapa=geemap.Map()
                #mapa = folium.Map(location=[-11.9021, -77.0686], tiles="OpenStreetMap",max_zoom=25, zoom_start=20)
                #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
