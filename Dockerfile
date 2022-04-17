@@ -1,4 +1,4 @@
-FROM python:3.6.13
+FROM python:3
 
 # remember to expose the port your app'll be exposed on.
 EXPOSE 8080
