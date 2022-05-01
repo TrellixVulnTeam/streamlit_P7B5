@@ -1,0 +1,10 @@
+includedir=C:/Users/RICHARD/.conda/envs/excel/Library/include
+libdir=C:/Users/RICHARD/.conda/envs/excel/Library/lib
+
+Name: aws-cpp-sdk-core
+Description: 
+Version: 1.8.185
+Cflags: -I${includedir} 
+Libs: -L${libdir} -laws-cpp-sdk-core 
+Libs.private: -laws-c-event-stream -laws-checksums -laws-c-common -lUserenv -lversion -lws2_32 -lcurl -lBcrypt
+Requires: 

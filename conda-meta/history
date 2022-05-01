@@ -56,3 +56,103 @@
 +defaults/win-64::zlib-1.2.11-h62dcd97_4
 +defaults/win-64::zstd-1.4.9-h19a0ad4_0
 # update specs: ['seaborn', 'xarray', 'matplotlib']
+==> 2022-04-29 22:25:41 <==
+# cmd: C:\ProgramData\Anaconda3\Scripts\conda-script.py install fiona
+# conda version: 4.8.2
+-defaults/win-64::ca-certificates-2021.10.26-haa95532_2
+-defaults/win-64::openssl-1.1.1l-h2bbff1b_0
++defaults/noarch::attrs-21.4.0-pyhd3eb1b0_0
++defaults/noarch::click-7.1.2-pyhd3eb1b0_0
++defaults/noarch::click-plugins-1.1.1-pyhd3eb1b0_0
++defaults/noarch::munch-2.5.0-pyhd3eb1b0_0
++defaults/win-64::aws-c-common-0.4.57-ha925a31_1
++defaults/win-64::aws-c-event-stream-0.1.6-hd77b12b_5
++defaults/win-64::aws-checksums-0.1.9-ha925a31_0
++defaults/win-64::aws-sdk-cpp-1.8.185-hd77b12b_0
++defaults/win-64::bzip2-1.0.8-he774522_0
++defaults/win-64::ca-certificates-2022.3.29-haa95532_1
++defaults/win-64::cfitsio-3.470-he774522_6
++defaults/win-64::cligj-0.7.2-py36haa95532_0
++defaults/win-64::curl-7.82.0-h2bbff1b_0
++defaults/win-64::expat-2.4.4-h6c2663c_0
++defaults/win-64::fiona-1.8.13.post1-py36h758c064_0
++defaults/win-64::freexl-1.0.6-h2bbff1b_0
++defaults/win-64::gdal-3.0.2-py36hb978731_1
++defaults/win-64::geos-3.8.0-h33f27b4_0
++defaults/win-64::geotiff-1.6.0-h5770a2b_0
++defaults/win-64::hdf4-4.2.13-h712560f_2
++defaults/win-64::hdf5-1.10.6-h7ebc959_0
++defaults/win-64::kealib-1.4.14-hde4a422_1
++defaults/win-64::krb5-1.19.2-h5b6d351_0
++defaults/win-64::libcurl-7.82.0-h86230a5_0
++defaults/win-64::libgdal-3.0.2-ha1b3edf_1
++defaults/win-64::libiconv-1.16-h2bbff1b_2
++defaults/win-64::libnetcdf-4.6.1-hf59b723_4
++defaults/win-64::libpq-12.9-hb652d5d_1
++defaults/win-64::libspatialite-4.3.0a-h7ffb84d_0
++defaults/win-64::libssh2-1.10.0-hcd4344a_0
++defaults/win-64::libxml2-2.9.12-h0ad7f3c_0
++defaults/win-64::m2w64-expat-2.1.1-2
++defaults/win-64::m2w64-gcc-libgfortran-5.3.0-6
++defaults/win-64::m2w64-gcc-libs-5.3.0-7
++defaults/win-64::m2w64-gcc-libs-core-5.3.0-7
++defaults/win-64::m2w64-gettext-0.19.7-2
++defaults/win-64::m2w64-gmp-6.1.0-2
++defaults/win-64::m2w64-libiconv-1.14-6
++defaults/win-64::m2w64-libwinpthread-git-5.0.0.4634.697f757-2
++defaults/win-64::m2w64-xz-5.2.2-2
++defaults/win-64::msys2-conda-epoch-20160418-1
++defaults/win-64::openjpeg-2.4.0-h4fc8c34_0
++defaults/win-64::openssl-1.1.1n-h2bbff1b_0
++defaults/win-64::postgresql-12.9-hb652d5d_1
++defaults/win-64::proj-6.2.1-h9f7ef89_0
++defaults/win-64::shapely-1.7.1-py36h06580b3_0
++defaults/win-64::tiledb-2.2.9-hf7ce2e6_0
++defaults/win-64::xerces-c-3.2.3-ha925a31_0
+# update specs: ['fiona']
+==> 2022-04-29 22:38:34 <==
+# cmd: C:\ProgramData\Anaconda3\Scripts\conda-script.py install geopandas
+# conda version: 4.8.2
++defaults/noarch::deprecated-1.2.12-pyhd3eb1b0_0
++defaults/noarch::geopandas-0.9.0-py_1
++defaults/noarch::geopandas-base-0.9.0-py_1
++defaults/noarch::joblib-1.0.1-pyhd3eb1b0_0
++defaults/noarch::mapclassify-2.2.0-py_0
++defaults/noarch::threadpoolctl-2.2.0-pyh0d69192_0
++defaults/win-64::libspatialindex-1.9.3-h6c2663c_0
++defaults/win-64::pyproj-2.6.1.post1-py36h593ac45_1
++defaults/win-64::rtree-0.9.7-py36h2eaa2aa_1
++defaults/win-64::scikit-learn-0.24.2-py36hf11a4ad_1
++defaults/win-64::wrapt-1.12.1-py36he774522_1
+# update specs: ['geopandas']
+==> 2022-04-30 22:14:19 <==
+# cmd: C:\ProgramData\Anaconda3\Scripts\conda-script.py install geopandas --channel=conda-forge
+# conda version: 4.8.2
+-defaults/noarch::geopandas-0.9.0-py_1
+-defaults/win-64::ca-certificates-2022.3.29-haa95532_1
+-defaults/win-64::openssl-1.1.1n-h2bbff1b_0
++conda-forge/noarch::descartes-1.1.0-py_4
++conda-forge/win-64::ca-certificates-2021.10.8-h5b45459_0
++conda-forge/win-64::geopandas-0.3.0-py36_0
++conda-forge/win-64::openssl-1.1.1n-h8ffe710_0
++conda-forge/win-64::pysal-1.14.4-py36_0
++conda-forge/win-64::sqlalchemy-1.0.19-py36hfa6e2cd_0
++defaults/win-64::psycopg2-2.8.6-py36hcd4344a_1
+# update specs: ['geopandas']
+==> 2022-05-01 06:45:25 <==
+# cmd: C:\ProgramData\Anaconda3\Scripts\conda-script.py install geopandas=0.8.1
+# conda version: 4.8.2
+-conda-forge/win-64::geopandas-0.3.0-py36_0
+-defaults/noarch::geopandas-base-0.9.0-py_1
+-defaults/win-64::certifi-2021.5.30-py36haa95532_0
++conda-forge/noarch::geopandas-0.8.1-py_0
++conda-forge/win-64::certifi-2021.5.30-py36ha15d459_0
++conda-forge/win-64::python_abi-3.6-2_cp36m
+# update specs: ['geopandas=0.8.1']
+==> 2022-05-01 08:09:39 <==
+# cmd: C:\ProgramData\Anaconda3\Scripts\conda-script.py install pyproj
+# conda version: 4.8.2
+-defaults/win-64::pyproj-2.6.1.post1-py36h593ac45_1
++conda-forge/win-64::pyproj-2.4.2.post1-py36h9716dcf_0
+# update specs: ['pyproj']
+# neutered specs: ['geopandas']

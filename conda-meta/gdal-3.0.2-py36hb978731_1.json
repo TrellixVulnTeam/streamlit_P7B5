@@ -1,0 +1,1101 @@
+{
+  "build": "py36hb978731_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "constrains": [],
+  "depends": [
+    "libgdal 3.0.2 ha1b3edf_1",
+    "numpy >=1.16.6,<2.0a0",
+    "python >=3.6,<3.7.0a0",
+    "vc >=14.1,<15.0a0",
+    "vs2015_runtime >=14.16.27012,<15.0a0"
+  ],
+  "extracted_package_dir": "C:\\Users\\RICHARD\\.conda\\pkgs\\gdal-3.0.2-py36hb978731_1",
+  "features": "",
+  "files": [
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/PKG-INFO",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/SOURCES.txt",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/dependency_links.txt",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/native_libs.txt",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/not-zip-safe",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/epsg_tr.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/esri2wkt.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gcps2vec.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gcps2wld.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal2tiles.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal2xyz.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_auth.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_calc.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_edit.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_fillnodata.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_merge.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_pansharpen.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_polygonize.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_proximity.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_retile.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_sieve.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalchksum.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalcompare.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalident.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalimport.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalmove.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/mkgraticule.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/ogrmerge.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/pct2rgb.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/rgb2pct.cpython-36.pyc",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/epsg_tr.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/esri2wkt.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gcps2vec.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gcps2wld.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal2tiles.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal2xyz.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_auth.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_calc.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_edit.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_fillnodata.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_merge.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_pansharpen.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_polygonize.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_proximity.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_retile.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_sieve.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalchksum.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalcompare.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalident.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalimport.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalmove.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/mkgraticule.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/ogrmerge.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/pct2rgb.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/rgb2pct.py",
+    "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/top_level.txt",
+    "Lib/site-packages/gdal.py",
+    "Lib/site-packages/gdalconst.py",
+    "Lib/site-packages/gdalnumeric.py",
+    "Lib/site-packages/ogr.py",
+    "Lib/site-packages/osgeo/__init__.py",
+    "Lib/site-packages/osgeo/__pycache__/__init__.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/_gdal.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/_gdal_array.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/_gdalconst.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/_gnm.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/_ogr.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/_osr.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/gdal.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/gdal_array.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/gdalconst.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/gdalnumeric.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/gnm.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/ogr.cpython-36.pyc",
+    "Lib/site-packages/osgeo/__pycache__/osr.cpython-36.pyc",
+    "Lib/site-packages/osgeo/_gdal.cp36-win_amd64.pyd",
+    "Lib/site-packages/osgeo/_gdal.py",
+    "Lib/site-packages/osgeo/_gdal_array.cp36-win_amd64.pyd",
+    "Lib/site-packages/osgeo/_gdal_array.py",
+    "Lib/site-packages/osgeo/_gdalconst.cp36-win_amd64.pyd",
+    "Lib/site-packages/osgeo/_gdalconst.py",
+    "Lib/site-packages/osgeo/_gnm.cp36-win_amd64.pyd",
+    "Lib/site-packages/osgeo/_gnm.py",
+    "Lib/site-packages/osgeo/_ogr.cp36-win_amd64.pyd",
+    "Lib/site-packages/osgeo/_ogr.py",
+    "Lib/site-packages/osgeo/_osr.cp36-win_amd64.pyd",
+    "Lib/site-packages/osgeo/_osr.py",
+    "Lib/site-packages/osgeo/gdal.py",
+    "Lib/site-packages/osgeo/gdal_array.py",
+    "Lib/site-packages/osgeo/gdalconst.py",
+    "Lib/site-packages/osgeo/gdalnumeric.py",
+    "Lib/site-packages/osgeo/gnm.py",
+    "Lib/site-packages/osgeo/ogr.py",
+    "Lib/site-packages/osgeo/osr.py",
+    "Lib/site-packages/osr.py",
+    "Scripts/epsg_tr.py",
+    "Scripts/esri2wkt.py",
+    "Scripts/gcps2vec.py",
+    "Scripts/gcps2wld.py",
+    "Scripts/gdal2tiles.py",
+    "Scripts/gdal2xyz.py",
+    "Scripts/gdal_auth.py",
+    "Scripts/gdal_calc.py",
+    "Scripts/gdal_edit.py",
+    "Scripts/gdal_fillnodata.py",
+    "Scripts/gdal_merge.py",
+    "Scripts/gdal_pansharpen.py",
+    "Scripts/gdal_polygonize.py",
+    "Scripts/gdal_proximity.py",
+    "Scripts/gdal_retile.py",
+    "Scripts/gdal_sieve.py",
+    "Scripts/gdalchksum.py",
+    "Scripts/gdalcompare.py",
+    "Scripts/gdalident.py",
+    "Scripts/gdalimport.py",
+    "Scripts/gdalmove.py",
+    "Scripts/mkgraticule.py",
+    "Scripts/ogrmerge.py",
+    "Scripts/pct2rgb.py",
+    "Scripts/rgb2pct.py"
+  ],
+  "fn": "gdal-3.0.2-py36hb978731_1.conda",
+  "legacy_bz2_md5": "d1ab1d42b48319dbc1b7efb404578ac3",
+  "legacy_bz2_size": 1589787,
+  "license": "MIT",
+  "link": {
+    "source": "C:\\Users\\RICHARD\\.conda\\pkgs\\gdal-3.0.2-py36hb978731_1",
+    "type": 1
+  },
+  "md5": "65e3a936601021efe5849e71d0b1b570",
+  "name": "gdal",
+  "package_tarball_full_path": "C:\\Users\\RICHARD\\.conda\\pkgs\\gdal-3.0.2-py36hb978731_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/PKG-INFO",
+        "path_type": "hardlink",
+        "sha256": "0df3622fcffc87f560bacb9f28a0bf93504d75ed12bb90c8aea3839d6110e1b9",
+        "sha256_in_prefix": "0df3622fcffc87f560bacb9f28a0bf93504d75ed12bb90c8aea3839d6110e1b9",
+        "size_in_bytes": 8823
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/SOURCES.txt",
+        "path_type": "hardlink",
+        "sha256": "cc004f9723a3980558c4b35a222b749801d80c3efa8fb031c9d7468768fca072",
+        "sha256_in_prefix": "cc004f9723a3980558c4b35a222b749801d80c3efa8fb031c9d7468768fca072",
+        "size_in_bytes": 1052
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/dependency_links.txt",
+        "path_type": "hardlink",
+        "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "size_in_bytes": 1
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/native_libs.txt",
+        "path_type": "hardlink",
+        "sha256": "05f3b74766741fba77935da37738d43dfecb9444073a6498196200c8ea67c85c",
+        "sha256_in_prefix": "05f3b74766741fba77935da37738d43dfecb9444073a6498196200c8ea67c85c",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/not-zip-safe",
+        "path_type": "hardlink",
+        "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "sha256_in_prefix": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+        "size_in_bytes": 2
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/epsg_tr.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "de96a9671592037fd8c407f4334fa5c197d87584594c3e07539a30d85acb9bf1",
+        "sha256_in_prefix": "de96a9671592037fd8c407f4334fa5c197d87584594c3e07539a30d85acb9bf1",
+        "size_in_bytes": 3224
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/esri2wkt.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "09d20f42a3ed6d0b73b23c250951746dd6ef6c4f4dac11d0d6e0dd408007b7d7",
+        "sha256_in_prefix": "09d20f42a3ed6d0b73b23c250951746dd6ef6c4f4dac11d0d6e0dd408007b7d7",
+        "size_in_bytes": 607
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gcps2vec.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "5d81cb918aea60d64cc44f711d5ca842fc4d8c860dad0c7e720da4ad37aae987",
+        "sha256_in_prefix": "5d81cb918aea60d64cc44f711d5ca842fc4d8c860dad0c7e720da4ad37aae987",
+        "size_in_bytes": 2110
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gcps2wld.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ef2444b55d1d8279c8ad876eff563d46c53d862d3c64364b4126a5c88a3fc0d",
+        "sha256_in_prefix": "2ef2444b55d1d8279c8ad876eff563d46c53d862d3c64364b4126a5c88a3fc0d",
+        "size_in_bytes": 777
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal2tiles.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "5635fda81aaac9dce222f309151845bc31747a5fed11c9f4dd98fd3d150bd166",
+        "sha256_in_prefix": "5635fda81aaac9dce222f309151845bc31747a5fed11c9f4dd98fd3d150bd166",
+        "size_in_bytes": 87689
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal2xyz.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "77849937f0e302ca7eba79769785881db2b23c54dba1591db23289660c5813ca",
+        "sha256_in_prefix": "77849937f0e302ca7eba79769785881db2b23c54dba1591db23289660c5813ca",
+        "size_in_bytes": 2434
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_auth.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "140aab28d519677d329de9a2b7c5a5e7eaac463d8e9f24ae3aed2429af3d69d7",
+        "sha256_in_prefix": "140aab28d519677d329de9a2b7c5a5e7eaac463d8e9f24ae3aed2429af3d69d7",
+        "size_in_bytes": 2227
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_calc.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "55dc87a99203a14d292ef8a94f8bd81dd8c0c8a7c59aa9eee72604b26918b805",
+        "sha256_in_prefix": "55dc87a99203a14d292ef8a94f8bd81dd8c0c8a7c59aa9eee72604b26918b805",
+        "size_in_bytes": 10887
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_edit.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "2aee20740da137d87f553b8f5445445a5caf69d4d7b7624a9788962582c5512d",
+        "sha256_in_prefix": "2aee20740da137d87f553b8f5445445a5caf69d4d7b7624a9788962582c5512d",
+        "size_in_bytes": 7724
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_fillnodata.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "fad89c31948eeeb92219c1ffb80e7da6965b0504b42639342467db7f4911d194",
+        "sha256_in_prefix": "fad89c31948eeeb92219c1ffb80e7da6965b0504b42639342467db7f4911d194",
+        "size_in_bytes": 2922
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_merge.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "24060bcf7fca0cd140cdecc688d51ed56908984c54512e1c884bc462a40bc681",
+        "sha256_in_prefix": "24060bcf7fca0cd140cdecc688d51ed56908984c54512e1c884bc462a40bc681",
+        "size_in_bytes": 11931
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_pansharpen.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "ef233785360c221708947fda6121df2071ccb09b4f9d73adad8912c12c81b7f7",
+        "sha256_in_prefix": "ef233785360c221708947fda6121df2071ccb09b4f9d73adad8912c12c81b7f7",
+        "size_in_bytes": 7003
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_polygonize.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "e0970a7215b6e00c792a798474cb669f19ab30a5ef90dcd14ce86c8292f997ff",
+        "sha256_in_prefix": "e0970a7215b6e00c792a798474cb669f19ab30a5ef90dcd14ce86c8292f997ff",
+        "size_in_bytes": 4079
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_proximity.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "0656cc6e28139857272c30b168d8561a433e92f5d342ae3fd4cff4ff7ed56d4e",
+        "sha256_in_prefix": "0656cc6e28139857272c30b168d8561a433e92f5d342ae3fd4cff4ff7ed56d4e",
+        "size_in_bytes": 3851
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_retile.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "a9cf4fc8440b71ede768ebf5e0ec1db05a74865b002ebccc5ea76fbcf7978568",
+        "sha256_in_prefix": "a9cf4fc8440b71ede768ebf5e0ec1db05a74865b002ebccc5ea76fbcf7978568",
+        "size_in_bytes": 20963
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdal_sieve.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "1b0a1706fa2e6293cc454740143fe1651fd3877b6c7744cd74aa5965d8be43a0",
+        "sha256_in_prefix": "1b0a1706fa2e6293cc454740143fe1651fd3877b6c7744cd74aa5965d8be43a0",
+        "size_in_bytes": 3520
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalchksum.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "7381b199fb71c092e095332ac39652447d460fb1ca31d3e7f75aa487491c2ef8",
+        "sha256_in_prefix": "7381b199fb71c092e095332ac39652447d460fb1ca31d3e7f75aa487491c2ef8",
+        "size_in_bytes": 1163
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalcompare.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "41b063aa111c14a7e33fb37e105f2f6d8da20eb261437dbeccce39a7fc0a667c",
+        "sha256_in_prefix": "41b063aa111c14a7e33fb37e105f2f6d8da20eb261437dbeccce39a7fc0a667c",
+        "size_in_bytes": 5482
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalident.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "a28720d099c85dd018d6eb4e95393f8839c6ab59ac704408df097bf9ea1ab625",
+        "sha256_in_prefix": "a28720d099c85dd018d6eb4e95393f8839c6ab59ac704408df097bf9ea1ab625",
+        "size_in_bytes": 1271
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalimport.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "7a63d71a7fc83277506845d6e151ba5e8d402f2dab47e4128cef5d6fe93e826f",
+        "sha256_in_prefix": "7a63d71a7fc83277506845d6e151ba5e8d402f2dab47e4128cef5d6fe93e826f",
+        "size_in_bytes": 1290
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/gdalmove.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "6fcb4eff579712048e314fb31cc1ae1046da6b1fd9ef97d3b15d5256a7b36045",
+        "sha256_in_prefix": "6fcb4eff579712048e314fb31cc1ae1046da6b1fd9ef97d3b15d5256a7b36045",
+        "size_in_bytes": 3851
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/mkgraticule.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d01b3d687eb5ce48bbd990ba1571b11ca9d3790648543da6a6a4fdfe3e1c741",
+        "sha256_in_prefix": "7d01b3d687eb5ce48bbd990ba1571b11ca9d3790648543da6a6a4fdfe3e1c741",
+        "size_in_bytes": 2957
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/ogrmerge.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "fa30f59ef0c0cbd8be646f6844f1c09012f30f28cb58f373f74333aa799af2b3",
+        "sha256_in_prefix": "fa30f59ef0c0cbd8be646f6844f1c09012f30f28cb58f373f74333aa799af2b3",
+        "size_in_bytes": 12305
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/pct2rgb.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "ccb0ccc7ae31ca5b081b26d47bc43431b1056d23caa67814748a6ba8d58fa40c",
+        "sha256_in_prefix": "ccb0ccc7ae31ca5b081b26d47bc43431b1056d23caa67814748a6ba8d58fa40c",
+        "size_in_bytes": 3548
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/__pycache__/rgb2pct.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "26ab8905e837bcca6548dea711d05548ec041d5ab7de0a43a7dc9da174635617",
+        "sha256_in_prefix": "26ab8905e837bcca6548dea711d05548ec041d5ab7de0a43a7dc9da174635617",
+        "size_in_bytes": 3461
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/epsg_tr.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "f0b18c4838e63c1c9380e75904f2d4185584effd419e7a64096007f4f4e2bfcd",
+        "sha256_in_prefix": "81b9227a6d4bed6709ef09c9e46fd3b123567b1d6e2fbe516f5edd2b0768b255",
+        "size_in_bytes": 7484
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/esri2wkt.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "2d9fa5321a4658aa379ee639c46e8b6a0fd51dfd9a8f59b0348709f2a187bd25",
+        "sha256_in_prefix": "41fc7b54663863521f375e38d9f6cfda585633d729df05e08c5045cfeeaedc67",
+        "size_in_bytes": 2112
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gcps2vec.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "e9b0d112ee210298abc3b4ab93e03a4cda26e4cfd2cd46d32381f6befaf8f801",
+        "sha256_in_prefix": "2873e41ad2d07488a37d6f18987c9edc03b04190b3b0152912c3b28b4d0583d2",
+        "size_in_bytes": 4940
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gcps2wld.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "67afdde6daf23b2235457d6bd34ece17d6b22cdd4e55e97cc9d05331c00a7718",
+        "sha256_in_prefix": "1eb2c3b13a2bd33657377b2587345f33a1c8beb10c447a024631fc85bca16dca",
+        "size_in_bytes": 2556
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal2tiles.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "c1a1daf4167a35a7d571194482f0d10d03e0eb3ba094b1ef9d7dd51d21ced494",
+        "sha256_in_prefix": "5bf78d157a01de23cc1cd3bf883cc5fb9898ccfebd720e9d2935716d2eb46afb",
+        "size_in_bytes": 120116
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal2xyz.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "03352db2441e891dc87f332b2eae03e36d09da88234b6cb4716ec725b294de2f",
+        "sha256_in_prefix": "41946fb2584e844106ffa11b70bf7ded0f9fb8d0bd7b9c875330ebfe71835a7e",
+        "size_in_bytes": 5229
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_auth.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "716dc7c8809e303c73ad3b5be8dcb058dfae2676019cebd1e7e5b919db28a1cc",
+        "sha256_in_prefix": "4da8d83165851b4d23a85632e2817fd928518c1b3b9e3a805a2387f79272e7a8",
+        "size_in_bytes": 4605
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_calc.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "b2397e89ccbb9802f80367b1cd8f9db62e8ba6b3311381f37ed9106e0079080e",
+        "sha256_in_prefix": "d1617c5cbb1e0028f1c249a389b07e49b49920fec4796b23f1759f1461f246cc",
+        "size_in_bytes": 20515
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_edit.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "33469944c6e0f37fa4231cb9ae34eba55ec4e97e29cd572a048f2789318bc7bc",
+        "sha256_in_prefix": "e6d5143922f79daedcf340e4cd3f20518bed75a59ca719170dd00efaec1a2629",
+        "size_in_bytes": 13460
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_fillnodata.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "9d6346248c8afa8d4b9abca8d1510c4aa2f09ba77bcd51cac92265c7a747e4fe",
+        "sha256_in_prefix": "fa14c3e94e9019e20e1f1a7fc90ea5c450c40d5b628bb8b5219e4f19507cc416",
+        "size_in_bytes": 6326
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_merge.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "63ce5507afcf43706257d6e5a89ef50cfeb7a5d095160bab6829251cda0af8df",
+        "sha256_in_prefix": "c805b87a66102468a43b5f2d40853779ea9bd57294ffbdd9aabfc799db815b07",
+        "size_in_bytes": 19877
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_pansharpen.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "19befc672d6a12f18d65dd34d459832d1cc3970ba7f00dc6dd8b7f1b057c10ae",
+        "sha256_in_prefix": "de0d39d1c7b8cdd503fa6eea8127e4ab66f7784a2b4668152e0fe892f525d85f",
+        "size_in_bytes": 11061
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_polygonize.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "1f0ee6ff7d32ef6515927c50d9cf1966445d6972730e9105eb340c0035f9f16d",
+        "sha256_in_prefix": "32dec03f4c57ed82ff3ee6e292bdf8ff22fecb45e579a84895e7c6a4ef4ab032",
+        "size_in_bytes": 8500
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_proximity.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "4d44b3db25133932c73f66a9898fe06815718bd534733013a727013963279032",
+        "sha256_in_prefix": "637375266ca8359f4edc0c9bfaea368cb4d4a8119b0001e3e96454d40f2cbe3d",
+        "size_in_bytes": 7576
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_retile.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "d7f14397ae56ddfe46151db7ec0d93431a72231288419a783032cf8f6b297118",
+        "sha256_in_prefix": "3b559c5b669c48e0e5d0adc4fb8c2c165acfc411f4942b844d998a5289b24482",
+        "size_in_bytes": 33601
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdal_sieve.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "afa637dbb7e263133617d2be8abb92ea78585c07b1c68b9f911498b4f37786d0",
+        "sha256_in_prefix": "8090f651e039aa13054fcd89df239d3025c75c38227ec22875090a53231fc8c2",
+        "size_in_bytes": 7133
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalchksum.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "934a2133e676689eae5fe14d9e23610ccd5baeaa8c2ca5ffcc60c7bb7b1c9f02",
+        "sha256_in_prefix": "f3ed768e4e1b6963e8693949a0dbfb42b7cc887fcaf56e7f75396456195a86f2",
+        "size_in_bytes": 3020
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalcompare.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "f7dcb4d7ef4efbb564e0be6e5abd0a0481138f410765a7edb9bbb46a8fa5be8a",
+        "sha256_in_prefix": "b6f45894299c18b076dcce4928c64f940548dbe6758371c357ab13c14218b3f7",
+        "size_in_bytes": 10597
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalident.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "30b09a9be3698251df60a5de2d0109cf2b34c6aa3091bc7e1c051e52e2b60943",
+        "sha256_in_prefix": "c907716eb711d66308bdc27620e002a723fbedf36d4e7fc4e145e2d946dd4539",
+        "size_in_bytes": 3524
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalimport.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "8620dfc72026bb215dcd11179059a6ee4114536da7813e07276792b25dfe086f",
+        "sha256_in_prefix": "11a0d948751ebd69f5671870495224f2bdbcf3fe04ee8b85265f5aa3cee057ec",
+        "size_in_bytes": 3024
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/gdalmove.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "861e64f74b1d485d40864f3c07069a22af275389989c378bad52b2ca42a00e51",
+        "sha256_in_prefix": "d8f4cd76df8277e3fc52b978a21ffb9e8516850acade929728f7ef5739485de7",
+        "size_in_bytes": 9393
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/mkgraticule.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "7e151e6ca9c0d1845a085a154a6f23b8f64ed9d0802635039d09f55c496e626c",
+        "sha256_in_prefix": "cdf5d5c16d3ba04b0f215d20867e71fa657887f7cf4ba7b0c8c0cb336b4f0338",
+        "size_in_bytes": 7065
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/ogrmerge.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "89b364d4f3cf860ed510383eccfa06e0557b3cc5f2441929c5182b4f70b707c0",
+        "sha256_in_prefix": "60c0776049dad5925fea40b85a8b127494bef15f9fbf802744ea9831287f4566",
+        "size_in_bytes": 22967
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/pct2rgb.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "34bd438f78cb13fbe7fa18cef2c73610a62e2024b9463e30f1a63f2f733b6ab6",
+        "sha256_in_prefix": "5b2caff6fa8dc8238e164e8ec5b59d7f061a4af8bc1351aba39c9303d85e7138",
+        "size_in_bytes": 7212
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/scripts/rgb2pct.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "068f7e68a2914e2d98b7d71ff96d6b969b3a8ebdb0a0c5e89c517988d6a5e4a4",
+        "sha256_in_prefix": "0fb389e4a9056aae630711da2b38d9cbdc5999ff4fe2b7d5b34e770c644a89e4",
+        "size_in_bytes": 6912
+      },
+      {
+        "_path": "Lib/site-packages/GDAL-3.0.2-py3.6-win-amd64.egg-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "a18eb813c6f21c82ea4ad4ac65671a1d2f17039c0dbcf0957e6f799e281c3237",
+        "sha256_in_prefix": "a18eb813c6f21c82ea4ad4ac65671a1d2f17039c0dbcf0957e6f799e281c3237",
+        "size_in_bytes": 41
+      },
+      {
+        "_path": "Lib/site-packages/gdal.py",
+        "path_type": "hardlink",
+        "sha256": "df47dd8d8e36c3e3437eb5afaa5971afc46599bd6b429e6e04f7ca8ca2ded705",
+        "sha256_in_prefix": "df47dd8d8e36c3e3437eb5afaa5971afc46599bd6b429e6e04f7ca8ca2ded705",
+        "size_in_bytes": 128
+      },
+      {
+        "_path": "Lib/site-packages/gdalconst.py",
+        "path_type": "hardlink",
+        "sha256": "9920537bc4acb47f566859fd1a027c2ca5fdf3b20226c8b9566aab48d76e11f2",
+        "sha256_in_prefix": "9920537bc4acb47f566859fd1a027c2ca5fdf3b20226c8b9566aab48d76e11f2",
+        "size_in_bytes": 143
+      },
+      {
+        "_path": "Lib/site-packages/gdalnumeric.py",
+        "path_type": "hardlink",
+        "sha256": "5b7834246221fc62d820d651686a1e07bafc32997e52e94ed6244c20e1bca81c",
+        "sha256_in_prefix": "5b7834246221fc62d820d651686a1e07bafc32997e52e94ed6244c20e1bca81c",
+        "size_in_bytes": 147
+      },
+      {
+        "_path": "Lib/site-packages/ogr.py",
+        "path_type": "hardlink",
+        "sha256": "b534ecbbb48e3c74175ca32387ed117cefdbd015cb6be073f96decbbae51efbc",
+        "sha256_in_prefix": "b534ecbbb48e3c74175ca32387ed117cefdbd015cb6be073f96decbbae51efbc",
+        "size_in_bytes": 125
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "46a8a41ce7dbe73dc77b0c2c62c15749fa1c61b4c09bae3505e3e84e0e75d286",
+        "sha256_in_prefix": "46a8a41ce7dbe73dc77b0c2c62c15749fa1c61b4c09bae3505e3e84e0e75d286",
+        "size_in_bytes": 778
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/__init__.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "f1a39258205d96faa3ed41978d9b7f97a8c766fb8ec1cb0f4c9e02ebe19f04ae",
+        "sha256_in_prefix": "f1a39258205d96faa3ed41978d9b7f97a8c766fb8ec1cb0f4c9e02ebe19f04ae",
+        "size_in_bytes": 717
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/_gdal.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "45cd735f117dfffff8735a535315880df4c935547f6fe2706aae461ed76fe4bb",
+        "sha256_in_prefix": "45cd735f117dfffff8735a535315880df4c935547f6fe2706aae461ed76fe4bb",
+        "size_in_bytes": 566
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/_gdal_array.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "66e4edb4209806001c312b26502fd2b2c9fca06c10020b4161d1de98fb4dc49a",
+        "sha256_in_prefix": "66e4edb4209806001c312b26502fd2b2c9fca06c10020b4161d1de98fb4dc49a",
+        "size_in_bytes": 578
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/_gdalconst.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "458990fbcbbc491629e27dd848cfed3d5998d10621ed715510b802e56422b663",
+        "sha256_in_prefix": "458990fbcbbc491629e27dd848cfed3d5998d10621ed715510b802e56422b663",
+        "size_in_bytes": 576
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/_gnm.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "7cb37a4678bb6e70e17319ef5952866694f05754cce32f53f491c2ba95d51d40",
+        "sha256_in_prefix": "7cb37a4678bb6e70e17319ef5952866694f05754cce32f53f491c2ba95d51d40",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/_ogr.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "a42ddd6e4c5457ca9a236057c9ccc541bbac5b696811f8bd2a39bedaefadbc76",
+        "sha256_in_prefix": "a42ddd6e4c5457ca9a236057c9ccc541bbac5b696811f8bd2a39bedaefadbc76",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/_osr.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a1a6e1fd089e8f917deafe3745a457507f4586ed19549de7ad1d8f5b18520e4",
+        "sha256_in_prefix": "9a1a6e1fd089e8f917deafe3745a457507f4586ed19549de7ad1d8f5b18520e4",
+        "size_in_bytes": 564
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/gdal.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "24d92be12389e71eae13cdfbb2e447370a755a2dfc6d0f93d82c7819c1bf1eeb",
+        "sha256_in_prefix": "24d92be12389e71eae13cdfbb2e447370a755a2dfc6d0f93d82c7819c1bf1eeb",
+        "size_in_bytes": 141293
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/gdal_array.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "6653254f76f92da9f37e4b997d607e31b701264b1569f2860d4f6c9df190cfac",
+        "sha256_in_prefix": "6653254f76f92da9f37e4b997d607e31b701264b1569f2860d4f6c9df190cfac",
+        "size_in_bytes": 14813
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/gdalconst.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "90e2f6bbe9fce700e88858bf805ef6ce91fffdeb732dbac222775f97f3de4d60",
+        "sha256_in_prefix": "90e2f6bbe9fce700e88858bf805ef6ce91fffdeb732dbac222775f97f3de4d60",
+        "size_in_bytes": 12175
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/gdalnumeric.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "9a0bd721506684a1bcc2967903e7b36b2f5b73dd151006b9c1e31c108fb1dea3",
+        "sha256_in_prefix": "9a0bd721506684a1bcc2967903e7b36b2f5b73dd151006b9c1e31c108fb1dea3",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/gnm.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "d1e17759a26c6a5a3e851ff33601e80c12bcf1eef1606785f6bf9ac93cbcc5a3",
+        "sha256_in_prefix": "d1e17759a26c6a5a3e851ff33601e80c12bcf1eef1606785f6bf9ac93cbcc5a3",
+        "size_in_bytes": 12764
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/ogr.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "bb42f9c63460e64bd5b84b4fd269efcbc1b0d50a2459648e50dcd5d3b7a78a67",
+        "sha256_in_prefix": "bb42f9c63460e64bd5b84b4fd269efcbc1b0d50a2459648e50dcd5d3b7a78a67",
+        "size_in_bytes": 269576
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/__pycache__/osr.cpython-36.pyc",
+        "path_type": "hardlink",
+        "sha256": "f51c0eb5e41a016640e6bb0cb57af88ca350ce8511b8e968f836f5b71f6c76dc",
+        "sha256_in_prefix": "f51c0eb5e41a016640e6bb0cb57af88ca350ce8511b8e968f836f5b71f6c76dc",
+        "size_in_bytes": 63142
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gdal.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "a61cf097660bb5944f8ca077deae1888c8b2de4e921e8cc998611553c6c9285a",
+        "sha256_in_prefix": "a61cf097660bb5944f8ca077deae1888c8b2de4e921e8cc998611553c6c9285a",
+        "size_in_bytes": 492544
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gdal.py",
+        "path_type": "hardlink",
+        "sha256": "b7ee4f6c40061ba35a0490180d3d812c809b2d33af8866ca4a1ad55ec6cd4403",
+        "sha256_in_prefix": "b7ee4f6c40061ba35a0490180d3d812c809b2d33af8866ca4a1ad55ec6cd4403",
+        "size_in_bytes": 427
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gdal_array.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "834914ada3b16ea3a428e2266b294353db9a24007b78b54ddbdb63d2b189f835",
+        "sha256_in_prefix": "834914ada3b16ea3a428e2266b294353db9a24007b78b54ddbdb63d2b189f835",
+        "size_in_bytes": 138240
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gdal_array.py",
+        "path_type": "hardlink",
+        "sha256": "79a113eec4c50bd7de27670ecc4245a9eb217d2136fcab782005ac5a36b414ee",
+        "sha256_in_prefix": "79a113eec4c50bd7de27670ecc4245a9eb217d2136fcab782005ac5a36b414ee",
+        "size_in_bytes": 433
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gdalconst.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "4705d0c883ffe8d9112fa57ed747bf2fa65be89a56ff3a44e197cb778b3f364d",
+        "sha256_in_prefix": "4705d0c883ffe8d9112fa57ed747bf2fa65be89a56ff3a44e197cb778b3f364d",
+        "size_in_bytes": 88576
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gdalconst.py",
+        "path_type": "hardlink",
+        "sha256": "1df7f18ee899dc6dd1deff36c2143fb01fdc16baee28bb57be95689e9a5d3b1c",
+        "sha256_in_prefix": "1df7f18ee899dc6dd1deff36c2143fb01fdc16baee28bb57be95689e9a5d3b1c",
+        "size_in_bytes": 432
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gnm.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "aff62842b1b2cf1977396c8199b5000cbf7737361b9c702dd79d699e9144f34f",
+        "sha256_in_prefix": "aff62842b1b2cf1977396c8199b5000cbf7737361b9c702dd79d699e9144f34f",
+        "size_in_bytes": 93184
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_gnm.py",
+        "path_type": "hardlink",
+        "sha256": "059c544615a4bfb2cf1c3fcf0621a52337efd9bcf037acced5550fd7f58270c9",
+        "sha256_in_prefix": "059c544615a4bfb2cf1c3fcf0621a52337efd9bcf037acced5550fd7f58270c9",
+        "size_in_bytes": 426
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_ogr.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "6362351af02f55a910df9be154db7c3e95707218e19992483d31d22906be235d",
+        "sha256_in_prefix": "6362351af02f55a910df9be154db7c3e95707218e19992483d31d22906be235d",
+        "size_in_bytes": 607232
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_ogr.py",
+        "path_type": "hardlink",
+        "sha256": "89d1ca53cdd5ffef3c5aed714f1a5e21fdc71fe7593c1d578c42f8f1b30fc5fa",
+        "sha256_in_prefix": "89d1ca53cdd5ffef3c5aed714f1a5e21fdc71fe7593c1d578c42f8f1b30fc5fa",
+        "size_in_bytes": 426
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_osr.cp36-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "91bc10589ae22df195a9b39323e0c6b51f4f7d9f79576219cdbdb9965e0ae1bd",
+        "sha256_in_prefix": "91bc10589ae22df195a9b39323e0c6b51f4f7d9f79576219cdbdb9965e0ae1bd",
+        "size_in_bytes": 377856
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/_osr.py",
+        "path_type": "hardlink",
+        "sha256": "e62b3f0787b437c5adbd2c367d74dcbfc27250b888074b549ba856140361bf92",
+        "sha256_in_prefix": "e62b3f0787b437c5adbd2c367d74dcbfc27250b888074b549ba856140361bf92",
+        "size_in_bytes": 426
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/gdal.py",
+        "path_type": "hardlink",
+        "sha256": "645b5608b1b1107a0fcea4088e9ea9b440cd551905c156a8ac609d38b934482e",
+        "sha256_in_prefix": "645b5608b1b1107a0fcea4088e9ea9b440cd551905c156a8ac609d38b934482e",
+        "size_in_bytes": 154377
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/gdal_array.py",
+        "path_type": "hardlink",
+        "sha256": "16a484daa2686d4eb9f8443ec4500d92460f29fca7b6a7e9cab06a61bab1d2a4",
+        "sha256_in_prefix": "16a484daa2686d4eb9f8443ec4500d92460f29fca7b6a7e9cab06a61bab1d2a4",
+        "size_in_bytes": 20001
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/gdalconst.py",
+        "path_type": "hardlink",
+        "sha256": "b401484707658b39af23ee6106b2d680fbf79d2530d0aee37123ecbf5e401a03",
+        "sha256_in_prefix": "b401484707658b39af23ee6106b2d680fbf79d2530d0aee37123ecbf5e401a03",
+        "size_in_bytes": 16713
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/gdalnumeric.py",
+        "path_type": "hardlink",
+        "sha256": "ca027ae6afb495b0c76add24a33254807bf0c48e9df00c98b589b6a6fd329ada",
+        "sha256_in_prefix": "ca027ae6afb495b0c76add24a33254807bf0c48e9df00c98b589b6a6fd329ada",
+        "size_in_bytes": 51
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/gnm.py",
+        "path_type": "hardlink",
+        "sha256": "3dd5e0a540350294bb7b58ff42269bb82e1b5a1de42af89bbab6d83593191401",
+        "sha256_in_prefix": "3dd5e0a540350294bb7b58ff42269bb82e1b5a1de42af89bbab6d83593191401",
+        "size_in_bytes": 10841
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/ogr.py",
+        "path_type": "hardlink",
+        "sha256": "eea70e6c29a9477bfbdf696c889a70ea1f9a0bfe93b67253d3d7a03bb7bfa859",
+        "sha256_in_prefix": "eea70e6c29a9477bfbdf696c889a70ea1f9a0bfe93b67253d3d7a03bb7bfa859",
+        "size_in_bytes": 263350
+      },
+      {
+        "_path": "Lib/site-packages/osgeo/osr.py",
+        "path_type": "hardlink",
+        "sha256": "3d537dbcc83d2ec3113f9a690584e48ce57c373bff22d5d5b64079ec580f6f86",
+        "sha256_in_prefix": "3d537dbcc83d2ec3113f9a690584e48ce57c373bff22d5d5b64079ec580f6f86",
+        "size_in_bytes": 58053
+      },
+      {
+        "_path": "Lib/site-packages/osr.py",
+        "path_type": "hardlink",
+        "sha256": "79ef2d0364d04dc19531fcd14e2f1d3ef9247fbf0aa6c458c0b28373c1b44029",
+        "sha256_in_prefix": "79ef2d0364d04dc19531fcd14e2f1d3ef9247fbf0aa6c458c0b28373c1b44029",
+        "size_in_bytes": 125
+      },
+      {
+        "_path": "Scripts/epsg_tr.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "8b112e2894e956779e858d501c35fae0257285fddfd5ad9d281b02b231adedf5",
+        "sha256_in_prefix": "f84d54059dc7e9389458bd4569e585eeb3e07642d8bc76d05d3b9a6ef93aabcf",
+        "size_in_bytes": 198
+      },
+      {
+        "_path": "Scripts/esri2wkt.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "a70764d4f4f1d11df0ef4f8985ae66b207d7b342c23f0f93cfe145223826bdc9",
+        "sha256_in_prefix": "030806b38f7f5de636710373ff87ac29ef364ca8091cdc326a7d0f473afa9721",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Scripts/gcps2vec.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "acf436a291499adcc22fef6e36743cf275d7d50c0b7e2b0cee39b5e96919ac98",
+        "sha256_in_prefix": "ebcb8335e4ecd92d594b0f1ee46fab5e382673b519ec1161178935baf32241be",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Scripts/gcps2wld.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "821049155d2c11958ee678c4816cc25724227f0d87df57ffc6982ce64f44ff90",
+        "sha256_in_prefix": "d3a58dd717d50df386e45e0b5ffc29bdf4f081153ce82ceda42ae22279b85395",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Scripts/gdal2tiles.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "0c60a4be4256d55e97f52c48fd34b1cf263b4e71725eb3a62217bb57a6f7630e",
+        "sha256_in_prefix": "8ddccbb750ef2d8d30e19ffc73b9a3d78b2e69a0ad94a443eaee686bbe696298",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "Scripts/gdal2xyz.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "0101a3f419a6eee91fee17152b2aa6ce0be36f9c684d5716f92e34e7b30c8589",
+        "sha256_in_prefix": "b387820be8310ef3e2128e4e841d745189da13e4ca6f1e4ba32d49f5d2c3b351",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Scripts/gdal_auth.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "6c3f50ac0bc14672430c9ad8632f409abd71d8011ab32d99af0952447d267784",
+        "sha256_in_prefix": "b139b132f50dc066098e811852f58e6d7f53ae613002e069ab8219573a342490",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "Scripts/gdal_calc.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "ca626eca76a1be098bf5d903f47088431f62c66aa60b58a430313cff077cf395",
+        "sha256_in_prefix": "a12a131efbb0e30db4f86b678b8588a823f7d4fbedf7c0919420e415e6e32415",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "Scripts/gdal_edit.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "428792e4a962c19bd3ab4ac6e16b036d796b26896a2e8258a0a1ea3eca2b27a8",
+        "sha256_in_prefix": "2d7b28a32af6b917cd9f0db07f0cc61a42daaaec410c3178aef85117d4230310",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "Scripts/gdal_fillnodata.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "c539100f44d7d030d248146dafccdf152139bf1d3a53b40a6f1c711d69024fbf",
+        "sha256_in_prefix": "bcf0c4eb54ceea46790aa19959b60d4807c1b5c77b5daca0ebf28991c668bf85",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "Scripts/gdal_merge.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "5108e494f1cb85997dbb064b5a15486cc834509e4977bb754d7b9d5d4ae0d63f",
+        "sha256_in_prefix": "25b3347867b8933ff1f88850e876b9b5063b4db54e607e973ddc17c7c771f6b0",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "Scripts/gdal_pansharpen.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "3068b4ec4ee9084883c1ed8ae7f823d43b1d6c8c084e874a39ad6d1c481fbb5f",
+        "sha256_in_prefix": "02afd48767c7554bcd5936199197c65e01eb18322cbd952b65b79f88c0b4f4e8",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "Scripts/gdal_polygonize.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "52908b73fe0a639c4b85c5a99a6d85cc319e3df7bba43ab23e0f5eb237a39ceb",
+        "sha256_in_prefix": "3bddcdca372a8c58b7ce276175bf39083e059f7b12f9c8e15d34cd2fdd2c0dce",
+        "size_in_bytes": 214
+      },
+      {
+        "_path": "Scripts/gdal_proximity.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "f66f075f71eff38f3388ba91933efb903a2376a51e20e51992bc1292770bc73d",
+        "sha256_in_prefix": "25fdc8355af643398e2e34d56ad07077a13dc776131f18b9b781d47c0f5f5ed1",
+        "size_in_bytes": 212
+      },
+      {
+        "_path": "Scripts/gdal_retile.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "ecafe7e745909ac4de28d73447bbd22cd16de8396b4a40c0ad01b103611327f4",
+        "sha256_in_prefix": "3fe56bfa4c0b4e6ba9603edfb9025855da05567270ad78a1c568ec4a37418d7b",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "Scripts/gdal_sieve.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "97e03335705d4ff5ba882f162209acaa3fd3941604203606df86eb4c0ae9c22f",
+        "sha256_in_prefix": "b21d31645e8313b63d79e80bcd04b3c7cb5ca9603eaa64c94f6b595407fd125e",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "Scripts/gdalchksum.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "7f2770469677e7ba88d0e818a84a2341c8fc216ba52375742822f24c98376e4c",
+        "sha256_in_prefix": "b82350e1acae228d895e2e2e12ce5fd9714616e9dc679157021b1d6cf8c4b253",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "Scripts/gdalcompare.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "b1a7c8db8bda483e85120c39eba9f92de562df835c2084d7bdc4efb3662b03d4",
+        "sha256_in_prefix": "eaf3894cc50877ce42cc3d95731e92563f2fff107b117b78cdfb354f41cb6846",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "Scripts/gdalident.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "54a8eafcc8a02382bb0bc282c3753d3c1004f0ace0dfb164bbdef8a075eaa7aa",
+        "sha256_in_prefix": "2f640b9c92087768579fe56e272225627eed838f89fef995cb3fe13a4a141e2a",
+        "size_in_bytes": 202
+      },
+      {
+        "_path": "Scripts/gdalimport.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "f111ffd108b0840119afc67aad9002dd89c098063d4c9529298ca630eca65045",
+        "sha256_in_prefix": "9f3d615f1496e3de8a5f864ec42b625cf434ff4ba204239e8ed24b1ae2139a04",
+        "size_in_bytes": 204
+      },
+      {
+        "_path": "Scripts/gdalmove.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "724f29a6f5f7479a7677a018d6e49c37e82e3d3a32ee4d182a930936b5ee0843",
+        "sha256_in_prefix": "ce2cfe7a8fc5dc88d0e5a6e018d7c86845627040ee1dca28657a26b260558db0",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Scripts/mkgraticule.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "741cd1a716dbf5586551cf4b094f30db4f3bb425e3920a5d7b18c33a42c9fb4d",
+        "sha256_in_prefix": "6be6c20952e2f350333b49fa25b13daa6da3f95241b8c2ced27a636325ac4d05",
+        "size_in_bytes": 206
+      },
+      {
+        "_path": "Scripts/ogrmerge.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "f77ddc7635b52158826820d4e475495d9e2a8e78aca2a04364508757ba17afda",
+        "sha256_in_prefix": "ceab0839e06408829c4469828843024c7490c893bb8ca31d642c29ab1a963eda",
+        "size_in_bytes": 200
+      },
+      {
+        "_path": "Scripts/pct2rgb.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "84de90d2b2ed0599db0c26646408f3823f80c96fd93827c0c3c689ebee76eb90",
+        "sha256_in_prefix": "fd2fe430d2767545b44923335de1413602b1795cac0598a2da9ffd167aaf1216",
+        "size_in_bytes": 198
+      },
+      {
+        "_path": "Scripts/rgb2pct.py",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "prefix_placeholder": "C:\\ci\\gdal-split_1622391952354\\_h_env",
+        "sha256": "81d0a7e240c34c06f18b21bada3ab8bb2aaf71ae26f1811166d6dc34ce2eb80d",
+        "sha256_in_prefix": "889c0a350f93048ac08a2309347df2f15640be2c09b1ac36c6c7e9374bb18ba4",
+        "size_in_bytes": 198
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "2ed26c541ea2e1d08eeb2d4adfacd53d3e3f096998947769b3fc48ce03171b34",
+  "size": 1065237,
+  "subdir": "win-64",
+  "timestamp": 1622392939155,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/gdal-3.0.2-py36hb978731_1.conda",
+  "version": "3.0.2"
+}

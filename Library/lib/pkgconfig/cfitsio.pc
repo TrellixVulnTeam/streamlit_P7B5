@@ -1,0 +1,12 @@
+prefix=C:/Users/RICHARD/.conda/envs/excel/Library
+exec_prefix=C:/Users/RICHARD/.conda/envs/excel/Library
+libdir=
+includedir=C:/Users/RICHARD/.conda/envs/excel/Library/include/
+
+Name: cfitsio
+Description: FITS File Subroutine Library
+URL: https://heasarc.gsfc.nasa.gov/fitsio/
+Version: .
+Libs: -L${libdir} 
+Libs.private: -lm
+Cflags: -I${includedir}

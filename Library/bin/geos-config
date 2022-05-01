@@ -1,0 +1,76 @@
+#!/bin/sh
+
+prefix=C:/Users/RICHARD/.conda/envs/excel/Library
+exec_prefix=C:/Users/RICHARD/.conda/envs/excel/Library/bin
+libdir=C:/Users/RICHARD/.conda/envs/excel/Library/lib
+
+usage()
+{
+    cat <<EOF
+Usage: geos-config [OPTIONS]
+Options:
+     [--prefix]
+     [--version]
+     [--libs]
+     [--clibs]
+     [--cclibs]
+     [--static-clibs]
+     [--static-cclibs]
+     [--cflags]
+     [--ldflags]
+     [--includes]
+     [--jtsport]
+EOF
+    exit $1
+}
+
+if test $# -eq 0; then
+  usage 1 1>&2
+fi
+
+while test $# -gt 0; do
+case "$1" in
+    -*=*) optarg=`echo "$1" | sed 's/[-_a-zA-Z0-9]*=//'` ;;
+    *) optarg= ;;
+esac
+case $1 in
+    --prefix)
+      echo C:/Users/RICHARD/.conda/envs/excel/Library
+      ;;
+    --version)
+      echo 3.8.0
+      ;;
+    --cflags)
+      echo -IC:/Users/RICHARD/.conda/envs/excel/Library/include
+      ;;
+    --libs)
+      echo -LC:/Users/RICHARD/.conda/envs/excel/Library/lib -lgeos-3
+      ;;
+    --clibs)
+      echo -LC:/Users/RICHARD/.conda/envs/excel/Library/lib -lgeos_c
+      ;;
+    --cclibs)
+      echo -LC:/Users/RICHARD/.conda/envs/excel/Library/lib -lgeos
+      ;;
+    --static-clibs)
+      echo -LC:/Users/RICHARD/.conda/envs/excel/Library/lib -lgeos_c -lgeos -lm
+      ;;
+    --static-cclibs)
+      echo -LC:/Users/RICHARD/.conda/envs/excel/Library/lib -lgeos -lm
+      ;;
+    --ldflags)
+      echo -LC:/Users/RICHARD/.conda/envs/excel/Library/lib -lgeos
+      ;;
+    --includes)
+      echo C:/Users/RICHARD/.conda/envs/excel/Library/include
+      ;;
+    --jtsport)
+    echo 1.13.0
+      ;;
+    *)
+      usage 1 1>&2
+      ;;
+  esac
+  shift
+done
+

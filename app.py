@@ -8,7 +8,15 @@ import folium
 #import ee
 #ee.Initialize()
 import os
+import geopandas as gpd
+#from geopandas.geoseries import Geoseries
+from pyproj import CRS
+
+crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
+polygonos=gpd.read_file("shape/MONDELEZ.shp")
+#polygonos.set_crs(epsg=3857, inplace=True)
+
 # ecom_data.dropna(inplace=True)
 st.set_page_config(page_title='mondelez',layout='wide')
 st.markdown("""
@@ -178,53 +186,45 @@ if nav == "Ubicacion":
                resul_cob=df_cob.shape[0]
                st.markdown(resul)
                st.markdown(resul_cob)
-               df_sel=df_cob.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
+               df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
                import ee
                import geemap.foliumap as geemap
                from streamlit_folium import folium_static
                from folium import plugins
                from folium.plugins import HeatMap
                from folium.plugins import MarkerCluster
+               import os
                
-               # Create an interactive map
-               def ee_initialize(token_name="EARTHENGINE_TOKEN"):
-                    """Authenticates Earth Engine and initialize an Earth Engine session"""
-                    if ee.data._credentials is None:
-                         try:
-                              ee_token = os.environ.get(token_name)
-                              if ee_token is not None:
-                                   credential_file_path = os.path.expanduser("~/.config/earthengine/")
-                                   if not os.path.exists(credential_file_path):
-                                        credential = '{"refresh_token":"%s"}' % ee_token
-                                        os.makedirs(credential_file_path, exist_ok=True)
-                                        with open(credential_file_path + "credentials", "w") as file:
-                                             file.write(credential)
-                              ee.Initialize()
-                         except Exception:
-                              ee.Authenticate()
-                              ee.Initialize()
-               #ee_token = os.environ["EARTHENGINE_TOKEN"]
-               #credential = '{"refresh_token":"%s"}' % ee_token
-               #credential_file_path = os.path.expanduser("~/.config/earthengine/")
-               #os.makedirs(credential_file_path, exist_ok=True)
                
-               mapa=geemap.Map()
-               #mapa = folium.Map(location=[-11.9021, -77.0686], tiles="OpenStreetMap",max_zoom=25, zoom_start=20)
-               #Map = geemap.Map(plugin_Draw=True, Draw_export=False)
+               #mapa=geemap.Map()
+               for i in df_sel.itertuples():
+                    lat=i.LATITUD
+                    lon=i.LONGITUD
+               mapa = folium.Map(location=[lat, lon], tiles="OpenStreetMap", zoom_start=15)
+              
+               geopath=polygonos.geometry.to_json()
+               #zonas=folium.features.GeoJson(geopath)
+               zonas=folium.FeatureGroup(name='bat_exclusiva')
+               zonas=folium.features.GeoJson(geopath)
+               #mapa.add_to(zonas)
+               mapa.add_child(zonas)
                # Add a basemap
                #Map.add_basemap("TERRAIN")
-               fc = geemap.pandas_to_ee(df_sel, latitude="LATITUD", longitude="LONGITUD")
-               mapa.addLayer(fc, {'color':'red'}, "CLIENTES")
-               mapa.centerObject(fc,zoom=15)
-               
-               #cartera=folium.FeatureGroup(name='clientes')
-               #for i in df_sel.itertuples():
-               #     folium.Marker(location=[i.LATITUD,i.LONGITUD],
-               #                    popup=i.NOM_CLI).add_to(cartera)
-               #     mapa.add_child(cartera)
-               #     latitud=i.LATITUD
-               #     longitud=i.LONGITUD
-                    
+                             
+               cartera=folium.FeatureGroup(name='clientes_folium')
+               for i in df_sel.itertuples():
+                    folium.Marker(location=[i.LATITUD,i.LONGITUD],
+                                   popup=i.NOM_CLI,
+                                   icon=plugins.BeautifyIcon(
+                                        icon='circle',
+                                        number=i.COD_CLI,
+                                        border_color='blue',
+                                        border_widht=4,
+                                        text_color='green',
+                                        text_size=6,
+                                        text_align='center',
+                                        inner_icon_style='font-size:12px;padding-top:-5px;')).add_to(cartera)
+                    mapa.add_child(cartera)
                import pandas as pd
 
                d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
@@ -232,9 +232,8 @@ if nav == "Ubicacion":
                col_names=df.columns.values.tolist()
                x="LONGITUD"
                y="LATITUD"
-               marker_cluster = plugins.MarkerCluster(name="cluster").add_to(mapa)
-               mapa.add_child(marker_cluster)
-
+               marker_cluster=folium.FeatureGroup(name='clientes_cluster')
+               marker_cluster=MarkerCluster().add_to(mapa)
                for row in d.itertuples():
                     html = ""
                     for p in col_names:
@@ -252,7 +251,7 @@ if nav == "Ubicacion":
                                    location=[eval(f"row.{y}"), eval(f"row.{x}")],
                                    popup=popup_html
                     ).add_to(marker_cluster)
-                    
+               mapa.add_child(marker_cluster)     
                # Render the map using streamlit
                mapa.add_child(folium.map.LayerControl())
                #mapa=folium.Map(location=[latitud,longitud],zoom_start=15)

@@ -1,0 +1,144 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python",
+    "wrapt <2,>=1"
+  ],
+  "extracted_package_dir": "C:\\Users\\RICHARD\\.conda\\pkgs\\deprecated-1.2.12-pyhd3eb1b0_0",
+  "features": "",
+  "files": [
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/INSTALLER",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/LICENSE.rst",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/METADATA",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/RECORD",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/REQUESTED",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/WHEEL",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/direct_url.json",
+    "Lib/site-packages/Deprecated-1.2.12.dist-info/top_level.txt",
+    "Lib/site-packages/deprecated/__init__.py",
+    "Lib/site-packages/deprecated/classic.py",
+    "Lib/site-packages/deprecated/sphinx.py",
+    "Lib/site-packages/deprecated/__pycache__/__init__.cpython-36.pyc",
+    "Lib/site-packages/deprecated/__pycache__/classic.cpython-36.pyc",
+    "Lib/site-packages/deprecated/__pycache__/sphinx.cpython-36.pyc"
+  ],
+  "fn": "deprecated-1.2.12-pyhd3eb1b0_0.conda",
+  "legacy_bz2_md5": "aeec3438ec3dc34c245bb7effc3272d1",
+  "legacy_bz2_size": 12180,
+  "license": "MIT",
+  "license_family": "MIT",
+  "link": {
+    "source": "C:\\Users\\RICHARD\\.conda\\pkgs\\deprecated-1.2.12-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "md5": "c05ef7745536826ed13c39d989bc582c",
+  "name": "deprecated",
+  "noarch": "python",
+  "package_tarball_full_path": "C:\\Users\\RICHARD\\.conda\\pkgs\\deprecated-1.2.12-pyhd3eb1b0_0.conda",
+  "package_type": "noarch_python",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/LICENSE.rst",
+        "path_type": "hardlink",
+        "sha256": "1e83edd15be419b5d5bde372e325e527ff4f9915f548e7c75314b41f6699e83c",
+        "sha256_in_prefix": "1e83edd15be419b5d5bde372e325e527ff4f9915f548e7c75314b41f6699e83c",
+        "size_in_bytes": 1081
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "c5642644e3ff40f5fe3c166da4855fbe13fc9ded44bdd95cb87d6f3fecf2f561",
+        "sha256_in_prefix": "c5642644e3ff40f5fe3c166da4855fbe13fc9ded44bdd95cb87d6f3fecf2f561",
+        "size_in_bytes": 5791
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "7b004009aa98d0c22d377d03442569d4522bed5a704f31af493a26deb76e312a",
+        "sha256_in_prefix": "7b004009aa98d0c22d377d03442569d4522bed5a704f31af493a26deb76e312a",
+        "size_in_bytes": 1083
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "sha256_in_prefix": "67e9f2629c2b712ab17ddbb1e4c6e7fc3439db988fec9d831b72601af398c934",
+        "size_in_bytes": 110
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "513ade527b8b796d2a9f244257431cc5a3cb121db1c2e5e2658957a2ba523797",
+        "sha256_in_prefix": "513ade527b8b796d2a9f244257431cc5a3cb121db1c2e5e2658957a2ba523797",
+        "size_in_bytes": 83
+      },
+      {
+        "_path": "site-packages/Deprecated-1.2.12.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "9c76ce61ac0a3d0404e65425fada140752414498d4ca7fe6fcc6fc4552744630",
+        "sha256_in_prefix": "9c76ce61ac0a3d0404e65425fada140752414498d4ca7fe6fcc6fc4552744630",
+        "size_in_bytes": 11
+      },
+      {
+        "_path": "site-packages/deprecated/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "8a03c1bd5850fa48bfb78f8f53ddba570ff9eb2332c2edd3b14babf2291d6839",
+        "sha256_in_prefix": "8a03c1bd5850fa48bfb78f8f53ddba570ff9eb2332c2edd3b14babf2291d6839",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "site-packages/deprecated/classic.py",
+        "path_type": "hardlink",
+        "sha256": "42e826522ec8841be9da70ef32dc96a850cf451e37fbd9df4991b5649483a453",
+        "sha256_in_prefix": "42e826522ec8841be9da70ef32dc96a850cf451e37fbd9df4991b5649483a453",
+        "size_in_bytes": 9880
+      },
+      {
+        "_path": "site-packages/deprecated/sphinx.py",
+        "path_type": "hardlink",
+        "sha256": "f3d5a7be1eace4d1d6a5d66a0580e4c3d7072123a5dc2b8c4dfbc1081a55eea5",
+        "sha256_in_prefix": "f3d5a7be1eace4d1d6a5d66a0580e4c3d7072123a5dc2b8c4dfbc1081a55eea5",
+        "size_in_bytes": 10021
+      },
+      {
+        "_path": "Lib/site-packages/deprecated/__pycache__/__init__.cpython-36.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/deprecated/__pycache__/classic.cpython-36.pyc",
+        "path_type": "pyc_file"
+      },
+      {
+        "_path": "Lib/site-packages/deprecated/__pycache__/sphinx.cpython-36.pyc",
+        "path_type": "pyc_file"
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "3bf5a6a415c65506bc8a029b9c6000e3bcce457810ffe9e9da484b64a7ed803a",
+  "size": 12161,
+  "subdir": "noarch",
+  "timestamp": 1615660638891,
+  "track_features": "",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/deprecated-1.2.12-pyhd3eb1b0_0.conda",
+  "version": "1.2.12"
+}
