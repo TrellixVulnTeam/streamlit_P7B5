@@ -10,7 +10,7 @@ streamlit-folium
 earthengine-api>=0.1.230
 fiona
 geopandas==0.8.1
-proj==6.2.1
+proj
 pyproj
 
 
