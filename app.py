@@ -15,6 +15,12 @@ import os
 crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 polygonos=gpd.read_file("shape/MONDELEZ.shp")
+geopath=polygonos.geometry.to_json()
+#zonas=folium.features.GeoJson(geopath)
+zonas=folium.FeatureGroup(name='bat_exclusiva')
+zonas=folium.features.GeoJson(geopath)
+#mapa.add_to(zonas)
+
 
 # ecom_data.dropna(inplace=True)
 st.set_page_config(page_title='mondelez',layout='wide')
@@ -186,21 +192,13 @@ if nav == "Ubicacion":
                st.markdown(resul)
                st.markdown(resul_cob)
                df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
-               #import ee
-               #import geemap.foliumap as geemap
-             
                
                for i in df_sel.itertuples():
                     lat=i.LATITUD
                     lon=i.LONGITUD
                mapa = folium.Map(location=[lat, lon], tiles="OpenStreetMap", zoom_start=15)
-              
-               geopath=polygonos.geometry.to_json()
-               #zonas=folium.features.GeoJson(geopath)
-               zonas=folium.FeatureGroup(name='bat_exclusiva')
-               zonas=folium.features.GeoJson(geopath)
-               #mapa.add_to(zonas)
                mapa.add_child(zonas)
+              
                # Add a basemap
                #Map.add_basemap("TERRAIN")
                              
