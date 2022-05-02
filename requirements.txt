@@ -5,9 +5,7 @@ jsonschema==3.2.0
 requests==2.26.0
 plotly_express==0.4.1
 folium
-geemap
 streamlit-folium
-earthengine-api>=0.1.230
 fiona
 geopandas==0.8.1
 proj

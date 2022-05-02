@@ -1,21 +1,15 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
-#import geemap.foliumap as geemap
 import sys
-import geemap
 import folium
-#import ee
-#ee.Initialize()
 import os
 import geopandas as gpd
-#from geopandas.geoseries import Geoseries
 from pyproj import CRS
 
 crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 polygonos=gpd.read_file("shape/MONDELEZ.shp")
-#polygonos.set_crs(epsg=3857, inplace=True)
 
 # ecom_data.dropna(inplace=True)
 st.set_page_config(page_title='mondelez',layout='wide')
@@ -187,16 +181,14 @@ if nav == "Ubicacion":
                st.markdown(resul)
                st.markdown(resul_cob)
                df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
-               import ee
-               import geemap.foliumap as geemap
+               #import ee
+               #import geemap.foliumap as geemap
                from streamlit_folium import folium_static
                from folium import plugins
                from folium.plugins import HeatMap
                from folium.plugins import MarkerCluster
                import os
                
-               
-               #mapa=geemap.Map()
                for i in df_sel.itertuples():
                     lat=i.LATITUD
                     lon=i.LONGITUD
