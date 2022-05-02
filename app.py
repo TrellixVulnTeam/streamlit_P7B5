@@ -6,6 +6,11 @@ import folium
 import os
 import geopandas as gpd
 from pyproj import CRS
+from streamlit_folium import folium_static
+from folium import plugins
+from folium.plugins import HeatMap
+from folium.plugins import MarkerCluster
+import os
 
 crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
@@ -183,11 +188,7 @@ if nav == "Ubicacion":
                df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
                #import ee
                #import geemap.foliumap as geemap
-               from streamlit_folium import folium_static
-               from folium import plugins
-               from folium.plugins import HeatMap
-               from folium.plugins import MarkerCluster
-               import os
+             
                
                for i in df_sel.itertuples():
                     lat=i.LATITUD
@@ -217,7 +218,7 @@ if nav == "Ubicacion":
                                         text_align='center',
                                         inner_icon_style='font-size:12px;padding-top:-5px;')).add_to(cartera)
                     mapa.add_child(cartera)
-               import pandas as pd
+               
 
                d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
                df=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI']] 
