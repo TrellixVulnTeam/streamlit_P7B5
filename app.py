@@ -11,7 +11,7 @@ from folium import plugins
 from folium.plugins import HeatMap
 from folium.plugins import MarkerCluster
 import os
-
+#st.set_page_config(page_title='mondelez',Layout="wide")
 crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
 polygonos=gpd.read_file("shape/MONDELEZ.shp")
@@ -247,7 +247,8 @@ if nav == "Ubicacion":
                mapa.add_child(folium.map.LayerControl())
                #mapa=folium.Map(location=[latitud,longitud],zoom_start=15)
                #mapa.centerObject(marker_cluster,zoom=35)
-               folium_static(mapa)
+               folium_static(mapa,width=900, height=600)
+               #folium_static(mapa)
                #folium_static(mapa.add_child(folium.map.LayerControl())) 
                st.table(d)
                st.download_button(label='Download CSV',data=d.to_csv(),mime='text/csv')
