@@ -17,8 +17,8 @@ ecom_data = pd.read_csv('norte1.csv',sep=';')
 polygonos=gpd.read_file("shape/MONDELEZ.shp")
 geopath=polygonos.geometry.to_json()
 #zonas=folium.features.GeoJson(geopath)
-zonas=folium.FeatureGroup(name='bat_exclusiva')
-zonas=folium.features.GeoJson(geopath)
+polygon=folium.FeatureGroup(name='rutas_bat')
+polygon.add_child(folium.features.GeoJson(geopath))
 #mapa.add_to(zonas)
 
 
@@ -197,7 +197,7 @@ if nav == "Ubicacion":
                     lat=i.LATITUD
                     lon=i.LONGITUD
                mapa = folium.Map(location=[lat, lon], tiles="OpenStreetMap", zoom_start=15)
-               mapa.add_child(zonas)
+               mapa.add_child(polygon)
               
                # Add a basemap
                #Map.add_basemap("TERRAIN")
@@ -223,8 +223,8 @@ if nav == "Ubicacion":
                col_names=df.columns.values.tolist()
                x="LONGITUD"
                y="LATITUD"
-               marker_cluster=folium.FeatureGroup(name='clientes_cluster')
-               marker_cluster=MarkerCluster().add_to(mapa)
+               marker_cluster=folium.FeatureGroup(name='clientes_cluster')  
+               marker_cluster=MarkerCluster()
                for row in d.itertuples():
                     html = ""
                     for p in col_names:
@@ -242,7 +242,9 @@ if nav == "Ubicacion":
                                    location=[eval(f"row.{y}"), eval(f"row.{x}")],
                                    popup=popup_html
                     ).add_to(marker_cluster)
-               mapa.add_child(marker_cluster)     
+               #marker_cluster.add_child(MarkerCluster(marker_cluster))
+              
+               mapa.add_child(marker_cluster)   
                # Render the map using streamlit
                mapa.add_child(folium.map.LayerControl())
                #mapa=folium.Map(location=[latitud,longitud],zoom_start=15)
