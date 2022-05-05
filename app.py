@@ -217,6 +217,14 @@ if nav == "Ubicacion":
                                         inner_icon_style='font-size:12px;padding-top:-5px;')).add_to(cartera)
                     mapa.add_child(cartera)
                
+               rec_log=folium.FeatureGroup(name='recorrido')
+               points=[]
+               for i in df_sel.itertuples():
+                    points.append([i.LATITUD,i.LONGITUD])
+               folium.PolyLine(points,
+                              color='red',
+                              dash_array='10').add_to(rec_log)
+               mapa.add_child(rec_log)
 
                d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
                df=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI']] 
