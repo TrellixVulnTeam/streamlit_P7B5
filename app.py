@@ -14,7 +14,7 @@ import os
 #st.set_page_config(page_title='mondelez',Layout="wide")
 crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
-polygonos=gpd.read_file("shape/RUTAS_BAT_22.shp")
+polygonos=gpd.read_file("shape/RUTAS_BAT_2022.shp")
 geopath=polygonos.geometry.to_json()
 #zonas=folium.features.GeoJson(geopath)
 polygon=folium.FeatureGroup(name='rutas_bat')
