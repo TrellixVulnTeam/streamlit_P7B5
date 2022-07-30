@@ -188,8 +188,8 @@ if nav == "Ubicacion":
                mask=(dejavo_data['COD_VEN']==vendedor_selection) & (dejavo_data['DIA_VIS']==dia_selection)
                num_resul=dejavo_data[mask]  
                resul=dejavo_data[mask].shape[0] 
-               df_cob=num_resul.loc[num_resul['COB']==0]
-               resul_cob=df_cob.shape[0]
+               #df_cob=num_resul.loc[num_resul['COB']==0]
+               #resul_cob=df_cob.shape[0]
                #st.markdown(resul)
                #st.markdown(resul_cob)
                df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
