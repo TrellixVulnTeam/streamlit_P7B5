@@ -14,6 +14,7 @@ import os
 #st.set_page_config(page_title='mondelez',Layout="wide")
 crs=CRS('epsg:3857')
 ecom_data = pd.read_csv('norte1.csv',sep=';')
+dejavo_data=pd.read_csv('dejavo.csv',sep=';')
 polygonos=gpd.read_file("shape/RUTAS_BAT_2022_region.shp")
 geopath=polygonos.geometry.to_json()
 #zonas=folium.features.GeoJson(geopath)
@@ -68,7 +69,7 @@ if nav == "Cobertura":
      compra_pro=int(df_col.mean(skipna=True)) 
      col1, col2, col3, col4, col5=st.columns(5) 
      with col1:
-          df_cob=df_selection.loc[df_selection['MES']==12]
+          df_cob=df_selection.loc[df_selection['COB']==1]
           cli_cor=df_cob.shape[0]
           st.markdown("**Cobertura:**")
           st.markdown(f"<h2 style='text-align: left; color: red;'>{cli_cor:,}</h2)", unsafe_allow_html=True)                                   
@@ -168,26 +169,26 @@ if nav == "Vendedor":
           st.table(df_sel)
           st.download_button(label='Download CSV',data=df_sel.to_csv(),mime='text/csv')
 if nav == "Ubicacion":
-     dia=ecom_data['DIA_VIS'].unique().tolist()
+     dia=dejavo_data['DIA_VIS'].unique().tolist()
      dia_selection=st.sidebar.selectbox("Elije dia de visita",
                         dia,
                         index=0)  
-     supervisores=ecom_data['COD_MES'].unique().tolist()
+     supervisores=dejavo_data['COD_MES'].unique().tolist()
      proveedor_selection=st.sidebar.selectbox("Elije un Supervisor",
                         supervisores,
                         index=0)  
      if proveedor_selection :
-          vend_list=ecom_data.loc[ecom_data['COD_MES']==proveedor_selection]
+          vend_list=dejavo_data.loc[dejavo_data['COD_MES']==proveedor_selection]
           vendedores=vend_list['COD_VEN'].unique().tolist()
           vendedor_selection=st.sidebar.selectbox("Elije un Vendedor",
                         vendedores,
                         index=0) 
           
           if st.checkbox("Mostrar Plano"):
-               mask=(ecom_data['COD_VEN']==vendedor_selection) & (ecom_data['DIA_VIS']==dia_selection)
-               num_resul=ecom_data[mask]  
-               resul=ecom_data[mask].shape[0] 
-               df_cob=num_resul.loc[num_resul['MES']<12]
+               mask=(dejavo_data['COD_VEN']==vendedor_selection) & (dejavo_data['DIA_VIS']==dia_selection)
+               num_resul=dejavo_data[mask]  
+               resul=dejavo_data[mask].shape[0] 
+               df_cob=num_resul.loc[num_resul['COB']==0]
                resul_cob=df_cob.shape[0]
                #st.markdown(resul)
                #st.markdown(resul_cob)
@@ -208,7 +209,7 @@ if nav == "Ubicacion":
                                    popup=i.NOM_CLI,
                                    icon=plugins.BeautifyIcon(
                                         icon='circle',
-                                        number=i.COD_CLI,
+                                        number=i.REC_CLI,
                                         border_color='blue',
                                         border_widht=4,
                                         text_color='green',
