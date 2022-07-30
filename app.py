@@ -188,11 +188,11 @@ if nav == "Ubicacion":
                mask=(dejavo_data['COD_VEN']==vendedor_selection) & (dejavo_data['DIA_VIS']==dia_selection)
                num_resul=dejavo_data[mask]  
                resul=dejavo_data[mask].shape[0] 
-               #df_cob=num_resul.loc[num_resul['COB']==0]
-               #resul_cob=df_cob.shape[0]
+               df_cob=num_resul.loc[num_resul['AVA']==0]
+               resul_cob=df_cob.shape[0]
                #st.markdown(resul)
-               #st.markdown(resul_cob)
-               df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
+               st.markdown(resul_cob)
+               df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD','REC_CLI']] 
                
                for i in df_sel.itertuples():
                     lat=i.LATITUD
@@ -211,11 +211,11 @@ if nav == "Ubicacion":
                                         icon='circle',
                                         number=i.REC_CLI,
                                         border_color='blue',
-                                        border_widht=4,
-                                        text_color='green',
-                                        text_size=6,
+                                        border_widht=2,
+                                        text_color='black',
+                                        text_size=10,
                                         text_align='center',
-                                        inner_icon_style='font-size:12px;padding-top:-5px;')).add_to(cartera)
+                                        inner_icon_style='font-size:18px;padding-top:-5px;')).add_to(cartera)
                     mapa.add_child(cartera)
                
                rec_log=folium.FeatureGroup(name='recorrido')
@@ -228,8 +228,8 @@ if nav == "Ubicacion":
                               dash_array='10').add_to(rec_log)
                mapa.add_child(rec_log)
                #folium.Marker(location=[0.LATITUD,0.LATITUD], popup='Inicio',icon='cloud').add_to(mapa)
-               d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
-               df=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI']] 
+               d=df_cob.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
+               df=df_cob.loc[:,['COD_CLI','NOM_CLI','DIR_CLI']] 
                col_names=df.columns.values.tolist()
                x="LONGITUD"
                y="LATITUD"
