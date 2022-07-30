@@ -189,8 +189,8 @@ if nav == "Ubicacion":
                resul=ecom_data[mask].shape[0] 
                df_cob=num_resul.loc[num_resul['MES']<12]
                resul_cob=df_cob.shape[0]
-               st.markdown(resul)
-               st.markdown(resul_cob)
+               #st.markdown(resul)
+               #st.markdown(resul_cob)
                df_sel=num_resul.loc[:,['COD_CLI','DIA_VIS','NOM_CLI','DIR_CLI','LONGITUD','LATITUD']] 
                
                for i in df_sel.itertuples():
@@ -258,8 +258,8 @@ if nav == "Ubicacion":
                mapa.add_child(folium.map.LayerControl())
                #mapa=folium.Map(location=[latitud,longitud],zoom_start=15)
                #mapa.centerObject(marker_cluster,zoom=35)
-               folium_static(mapa,width=900, height=600)
+               folium_static(mapa,width=1200, height=600)
                #folium_static(mapa)
                #folium_static(mapa.add_child(folium.map.LayerControl())) 
-               st.table(d)
-               st.download_button(label='Download CSV',data=d.to_csv(),mime='text/csv')
+               #st.table(df)
+               st.download_button(label='Download CSV',data=df.to_csv(),mime='text/csv')
