@@ -32,7 +32,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<p class="big-font">Mondelez Diciembre 2021</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">Mondelez 2022</p>', unsafe_allow_html=True)
 nav=st.sidebar.radio("Menu",["KPI's","Cobertura","Volumen","Vendedor","Ubicacion"],index=0)
 if nav == "Cobertura":
      proveedores=ecom_data['COD_MES'].unique().tolist()
@@ -221,11 +221,12 @@ if nav == "Ubicacion":
                points=[]
                for i in df_sel.itertuples():
                     points.append([i.LATITUD,i.LONGITUD])
+                                      
                folium.PolyLine(points,
                               color='red',
                               dash_array='10').add_to(rec_log)
                mapa.add_child(rec_log)
-
+               #folium.Marker(location=[0.LATITUD,0.LATITUD], popup='Inicio',icon='cloud').add_to(mapa)
                d=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI','LATITUD','LONGITUD']] 
                df=num_resul.loc[:,['COD_CLI','NOM_CLI','DIR_CLI']] 
                col_names=df.columns.values.tolist()
